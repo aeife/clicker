@@ -1,0 +1,12 @@
+<ion-view view-title="Counter">
+    <ion-content scroll="false" ng-click="CounterCtrl.increaseCounter()" class="center-content">
+        <h1 class="circle-border counter-label">
+            {{CounterCtrl.getCount()}}
+        </h1>
+        <div stop-parent-click class="bottom-left">
+            <button class="button button-clear button-positive button-large" ng-click="CounterCtrl.decreaseCounter()">
+                -1
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
