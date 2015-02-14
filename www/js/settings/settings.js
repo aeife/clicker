@@ -1,6 +1,8 @@
-angular.module('clicker.settings', ['clicker.settings.theme'])
-    .controller('SettingsCtrl', function ($scope) {
+angular.module('clicker.settings', ['clicker.settings.theme', 'components.settingsData'])
+    .controller('SettingsCtrl', function ($scope, settingsData) {
         $scope.SettingsCtrl = {
-
+            getActiveTheme: function () {
+               return settingsData.activeTheme.name;
+            }
         };
     });
