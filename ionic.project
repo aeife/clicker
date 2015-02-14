@@ -1,4 +1,12 @@
 {
   "name": "clicker",
-  "app_id": "ffe14ab5"
+  "app_id": "ffe14ab5",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }
