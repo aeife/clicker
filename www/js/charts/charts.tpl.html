@@ -1,6 +1,17 @@
 <ion-view view-title="Charts">
     <ion-content>
-        <canvas id="line" class="chart chart-line" data="ChartsCtrl.chart.data" labels="ChartsCtrl.chart.labels"
+        <canvas ng-if="ChartsCtrl.chart.data[0].length > 0" id="line" class="chart chart-line" data="ChartsCtrl.chart.data" labels="ChartsCtrl.chart.labels"
                 legend="true" series="ChartsCtrl.chart.series" click="onClick"></canvas>
+        <ion-list>
+            <ion-item>
+                clicks per second: {{ChartsCtrl.statistics.perSecond | number: 2}}
+            </ion-item>
+            <ion-item>
+                clicks per minute: {{ChartsCtrl.statistics.perMinute | number: 2}}
+            </ion-item>
+            <ion-item>
+                clicks per hour: {{ChartsCtrl.statistics.perHour | number: 2}}
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>
