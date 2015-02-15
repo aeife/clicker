@@ -21,6 +21,9 @@ angular.module('components.clickData', [])
             removeLastClick: function () {
                 _clicks.pop();
                 _save();
+            },
+            reset: function () {
+                _clicks = [];
             }
         };
 

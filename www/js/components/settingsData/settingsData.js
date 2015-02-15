@@ -50,6 +50,11 @@ angular.module('components.settingsData', ['components.clickData'])
                     }
 
                 }
+            },
+            reset: function () {
+                settingsData.change.theme(settingsData.themes[0]);
+                settingsData.change.gestureAction('hold', settingsData.gestureActions.addFiveClicks);
+                settingsData.change.gestureAction('swipeleft', settingsData.gestureActions.none);
             }
         };
 

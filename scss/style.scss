@@ -25,6 +25,15 @@ $counter-color: #e39100;
   border-radius: 100%;
 }
 
+.fullscreen-content {
+  position: absolute;
+  top: 0;
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .fullscreen-content.has-header {
+  top: 0;
+}
+
 .bottom-left {
   position: absolute;
   bottom: 0;
