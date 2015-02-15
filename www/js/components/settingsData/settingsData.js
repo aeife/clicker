@@ -1,5 +1,5 @@
-angular.module('components.settingsData', [])
-    .service('settingsData', function () {
+angular.module('components.settingsData', ['components.clickData'])
+    .service('settingsData', function (clickData) {
         var settingsData = {
             themes: [
                 {name: 'light'},
@@ -9,11 +9,15 @@ angular.module('components.settingsData', [])
             gestureActions: {
                 none: {
                     id: 0,
-                    name: 'None'
+                    name: 'None',
+                    fn: function () {}
                 },
                 addFiveClicks: {
                     id: 1,
-                    name: 'Add Five Clicks'
+                    name: 'Add Five Clicks',
+                    fn: function () {
+                        clickData.addNClicks(5);
+                    }
                 }
             },
             gestures: {
@@ -21,7 +25,7 @@ angular.module('components.settingsData', [])
                     name: 'Hold',
                     action: null
                 },
-                swipeLeft: {
+                swipeleft: {
                     name: 'Swipe Left',
                     action: null
                 }
@@ -30,7 +34,7 @@ angular.module('components.settingsData', [])
 
         settingsData.activeTheme = settingsData.themes[0];
         settingsData.gestures.hold.action = settingsData.gestureActions.addFiveClicks;
-        settingsData.gestures.swipeLeft.action = settingsData.gestureActions.none;
+        settingsData.gestures.swipeleft.action = settingsData.gestureActions.none;
 
         return settingsData;
     });

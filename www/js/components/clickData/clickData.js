@@ -9,6 +9,9 @@ angular.module('components.clickData', [])
             addClick: function () {
                 _clicks.push({time: new Date().getTime()})
             },
+            addNClicks: function (n) {
+                _.times(n, clickData.addClick);
+            },
             removeLastClick: function () {
 
             }

@@ -1,5 +1,5 @@
-angular.module('clicker.counter', ['components.stopParentClick', 'components.clickData'])
-    .controller('CounterCtrl', function ($scope, clickData) {
+angular.module('clicker.counter', ['components.stopParentClick', 'components.clickData', 'components.settingsData'])
+    .controller('CounterCtrl', function ($scope, clickData, settingsData, $timeout) {
         $scope.CounterCtrl = {
             getCount: function () {
                 return clickData.getClicks().length;
@@ -9,9 +9,27 @@ angular.module('clicker.counter', ['components.stopParentClick', 'components.cli
             getClickData: function () {
                 return clickData.getClicks();
             },
-            hold: function () {
-                _.times(5, $scope.CounterCtrl.increaseCounter);
+            handleGesture: function (p) {
+                if (settingsData.gestures[p.type]) {
+                    $timeout(function () {
+                        settingsData.gestures[p.type].action.fn();
+                    }, 0);
+                }
+
             }
         };
 
+    })
+    .directive('detectGestures', function($ionicGesture, settingsData) {
+        return {
+            restrict :  'A',
+            scope: {
+                detectGestures: '='
+            },
+            link : function(scope, elem, attrs) {
+                for (var gesture in settingsData.gestures) {
+                    $ionicGesture.on(gesture, scope.detectGestures, elem);
+                }
+            }
+        }
     });
