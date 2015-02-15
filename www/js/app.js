@@ -9,6 +9,7 @@ angular.module('clicker', ['ionic',
     'clicker.counter',
     'clicker.settings',
     'clicker.charts',
+    'clicker.export',
     'components.settingsData'
 ])
 
@@ -92,6 +93,16 @@ angular.module('clicker', ['ionic',
           'sidebarContent': {
               templateUrl: "js/charts/charts.tpl.html",
               controller: 'ChartsCtrl'
+          }
+      }
+  })
+
+  .state('app.export', {
+      url: "/export",
+      views: {
+          'sidebarContent': {
+              templateUrl: "js/export/export.tpl.html",
+              controller: 'ExportCtrl'
           }
       }
   });
