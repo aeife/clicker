@@ -8,7 +8,7 @@ angular.module('clicker', ['ionic',
     'clicker.sidebar',
     'clicker.counter',
     'clicker.settings',
-    'clicker.charts',
+    'clicker.statistics',
     'clicker.export',
     'components.settingsData'
 ])
@@ -87,12 +87,12 @@ angular.module('clicker', ['ionic',
       }
   })
 
-  .state('app.charts', {
-      url: "/charts",
+  .state('app.statistics', {
+      url: "/statistics",
       views: {
           'sidebarContent': {
-              templateUrl: "js/charts/charts.tpl.html",
-              controller: 'ChartsCtrl'
+              templateUrl: "js/statistics/statistics.tpl.html",
+              controller: 'StatisticsCtrl'
           }
       }
   })

@@ -1,5 +1,5 @@
-angular.module('clicker.charts', ['chart.js', 'components.clickData'])
-    .controller('ChartsCtrl', function ($scope, clickData) {
+angular.module('clicker.statistics', ['chart.js', 'components.clickData'])
+    .controller('StatisticsCtrl', function ($scope, clickData) {
         var calculateChart = function (options) {
             if (!clickData.getClicks() || clickData.getClicks().length === 0) {
                 console.log("return");
@@ -48,7 +48,7 @@ angular.module('clicker.charts', ['chart.js', 'components.clickData'])
             return data;
         };
 
-        $scope.ChartsCtrl = {
+        $scope.StatisticsCtrl = {
             charts: {
                 sum: {
                     labels: [],
@@ -79,18 +79,18 @@ angular.module('clicker.charts', ['chart.js', 'components.clickData'])
                 if (clickData.getClicks() && clickData.getClicks().length > 0) {
                     var totalTime = _.last(clickData.getClicks()).time - _.first(clickData.getClicks()).time;
 
-                    $scope.ChartsCtrl.statistics.perSecond = clickData.getClicks().length / Math.abs(totalTime/1000);
-                    $scope.ChartsCtrl.statistics.perMinute = clickData.getClicks().length / Math.abs(totalTime/1000 * 60);
-                    $scope.ChartsCtrl.statistics.perHour = clickData.getClicks().length / Math.abs(totalTime/1000 * 60 * 60);
+                    $scope.StatisticsCtrl.statistics.perSecond = clickData.getClicks().length / Math.abs(totalTime/1000);
+                    $scope.StatisticsCtrl.statistics.perMinute = clickData.getClicks().length / Math.abs(totalTime/1000 * 60);
+                    $scope.StatisticsCtrl.statistics.perHour = clickData.getClicks().length / Math.abs(totalTime/1000 * 60 * 60);
                 }
             }
         };
 
         $scope.$on('$stateChangeSuccess',function(event, toState){
-            if (toState.name === 'app.charts') {
-                $scope.ChartsCtrl.generateCharts($scope.ChartsCtrl.charts.sum, {sum: true, dataPoints: 20});
-                $scope.ChartsCtrl.generateCharts($scope.ChartsCtrl.charts.rate, {sum: false, dataPoints: 20});
-                $scope.ChartsCtrl.generateStatistics();
+            if (toState.name === 'app.statistics') {
+                $scope.StatisticsCtrl.generateCharts($scope.StatisticsCtrl.charts.sum, {sum: true, dataPoints: 20});
+                $scope.StatisticsCtrl.generateCharts($scope.StatisticsCtrl.charts.rate, {sum: false, dataPoints: 20});
+                $scope.StatisticsCtrl.generateStatistics();
             }
         });
     });

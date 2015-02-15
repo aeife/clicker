@@ -1,0 +1,37 @@
+<ion-view view-title="Statistics">
+    <ion-content>
+        <div class="card">
+            <ion-item class="item-divider">
+                Click count
+            </ion-item>
+            <canvas ng-if="StatisticsCtrl.charts.sum.data[0].length > 0" id="line" class="chart chart-line" data="StatisticsCtrl.charts.sum.data" labels="StatisticsCtrl.charts.sum.labels"
+                    legend="true" series="StatisticsCtrl.charts.sum.series" click="onClick"></canvas>
+        </div>
+        <div class="card">
+            <ion-item class="item-divider">
+                Click rate
+            </ion-item>
+            <canvas ng-if="StatisticsCtrl.charts.rate.data[0].length > 0" id="line" class="chart chart-line" data="StatisticsCtrl.charts.rate.data" labels="StatisticsCtrl.charts.sum.labels"
+                    legend="true" series="StatisticsCtrl.charts.rate.series" click="onClick"></canvas>
+        </div>
+        <ion-list>
+            <div class="card">
+                <ion-item class="item-divider">
+                    Numbers
+                </ion-item>
+                <ion-item>
+                    clicks per second
+                    <div class="item-note">{{StatisticsCtrl.statistics.perSecond | number: 2}}</div>
+                </ion-item>
+                <ion-item>
+                    clicks per minute
+                    <div class="item-note">{{StatisticsCtrl.statistics.perMinute | number: 2}}</div>
+                </ion-item>
+                <ion-item>
+                    clicks per hour
+                    <div class="item-note">{{StatisticsCtrl.statistics.perHour | number: 2}}</div>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>
