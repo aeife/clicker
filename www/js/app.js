@@ -4,8 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic',
-    'starter.controllers',
+angular.module('clicker', ['ionic',
     'clicker.sidebar',
     'clicker.counter',
     'clicker.settings',
@@ -95,46 +94,11 @@ angular.module('starter', ['ionic',
               controller: 'ChartsCtrl'
           }
       }
-  })
-
-  .state('app.search', {
-    url: "/search",
-    views: {
-      'sidebarContent': {
-        templateUrl: "templates/search.html"
-      }
-    }
-  })
-
-  .state('app.browse', {
-    url: "/browse",
-    views: {
-      'sidebarContent': {
-        templateUrl: "templates/browse.html"
-      }
-    }
-  })
-    .state('app.playlists', {
-      url: "/playlists",
-      views: {
-        'sidebarContent': {
-          templateUrl: "templates/playlists.html",
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: "/playlists/:playlistId",
-    views: {
-      'sidebarContent': {
-        templateUrl: "templates/playlist.html",
-        controller: 'PlaylistCtrl'
-      }
-    }
   });
+
+
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/counter');
 })
 .controller('StyleCtrl', function ($scope, settingsData) {
     $scope.StyleCtrl = {
