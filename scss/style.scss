@@ -4,6 +4,9 @@ $sidebar-header-bg: #424242;
 $sidebar-border: #616161;
 $sidebar-color: #c0c0c0;
 
+$counter-size: 60vh;
+$counter-color: #e39100;
+
 .center-content {
   height: 100%;
   display: -webkit-flex;
@@ -12,22 +15,20 @@ $sidebar-color: #c0c0c0;
 }
 
 .counter-label {
-  width: 50vh;
-  height: 50vh;
-  line-height: 50vh;
+  width: $counter-size;
+  height: $counter-size;
+  line-height: $counter-size;
   text-align: center;
-  font-size: 100px;
+  font-size: $counter-size / 3;
+  color: orange;
+  border: 6px solid $counter-color;
+  border-radius: 100%;
 }
 
 .bottom-left {
   position: absolute;
   bottom: 0;
   right: 0;
-}
-
-.circle-border {
-  border: 6px solid black;
-  border-radius: 100%;
 }
 
 .menu.menu-left {

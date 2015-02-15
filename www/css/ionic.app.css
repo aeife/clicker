@@ -7012,20 +7012,19 @@ a.button {
   -webkit-align-items: center; }
 
 .counter-label {
-  width: 50vh;
-  height: 50vh;
-  line-height: 50vh;
+  width: 60vh;
+  height: 60vh;
+  line-height: 60vh;
   text-align: center;
-  font-size: 100px; }
+  font-size: 20vh;
+  color: orange;
+  border: 6px solid #e39100;
+  border-radius: 100%; }
 
 .bottom-left {
   position: absolute;
   bottom: 0;
   right: 0; }
-
-.circle-border {
-  border: 6px solid black;
-  border-radius: 100%; }
 
 .menu.menu-left .bar.bar-stable {
   background-color: #424242;
