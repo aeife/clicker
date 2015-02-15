@@ -41,6 +41,8 @@ $counter-color: #e39100;
 }
 
 .menu.menu-left {
+  background-color: $sidebar-bg;
+
   .bar.bar-stable {
     background-color: $sidebar-header-bg;
     background-image: none;

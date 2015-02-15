@@ -7033,14 +7033,16 @@ a.button {
   bottom: 0;
   right: 0; }
 
-.menu.menu-left .bar.bar-stable {
-  background-color: #424242;
-  background-image: none; }
-  .menu.menu-left .bar.bar-stable .title {
+.menu.menu-left {
+  background-color: #4e4e4e; }
+  .menu.menu-left .bar.bar-stable {
+    background-color: #424242;
+    background-image: none; }
+    .menu.menu-left .bar.bar-stable .title {
+      color: #c0c0c0; }
+  .menu.menu-left .item-content, .menu.menu-left .item {
+    background-color: #4e4e4e;
+    border-color: #616161;
     color: #c0c0c0; }
-.menu.menu-left .item-content, .menu.menu-left .item {
-  background-color: #4e4e4e;
-  border-color: #616161;
-  color: #c0c0c0; }
-  .menu.menu-left .item-content:active, .menu.menu-left .item:active {
-    background-color: #737373; }
+    .menu.menu-left .item-content:active, .menu.menu-left .item:active {
+      background-color: #737373; }
