@@ -18,16 +18,21 @@
         </ion-header-bar>
         <ion-content>
             <ion-list>
-                <ion-item nav-clear menu-close href="#/app/counter">
+                <ion-item nav-clear menu-close href="#/app/counter" class="item-icon-left">
+                    <i class="icon ion-pound"></i>
                     Counter
+                    <div class="item-note">{{SideBarCtrl.getClickDataCount()}}</div>
                 </ion-item>
-                <ion-item nav-clear menu-close href="#/app/settings">
+                <ion-item nav-clear menu-close href="#/app/settings" class="item-icon-left">
+                    <i class="icon ion-gear-b"></i>
                     Settings
                 </ion-item>
-                <ion-item nav-clear menu-close href="#/app/statistics">
+                <ion-item nav-clear menu-close href="#/app/statistics" class="item-icon-left">
+                    <i class="icon ion-stats-bars"></i>
                     Statistics
                 </ion-item>
-                <ion-item nav-clear menu-close href="#/app/export">
+                <ion-item nav-clear menu-close href="#/app/export" class="item-icon-left">
+                    <i class="icon ion-share"></i>
                     Export
                 </ion-item>
             </ion-list>
