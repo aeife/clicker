@@ -1,5 +1,5 @@
 <ion-view view-title="">
-    <ion-content scroll="false" ng-click="CounterCtrl.increaseCounter()" class="center-content">
+    <ion-content scroll="false" ng-click="CounterCtrl.increaseCounter()" on-hold="CounterCtrl.hold()" class="center-content">
         <h1 class="circle-border counter-label">
             {{CounterCtrl.getCount()}}
         </h1>

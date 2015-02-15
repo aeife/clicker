@@ -67,6 +67,26 @@ angular.module('starter', ['ionic',
       }
   })
 
+  .state('app.gestures', {
+      url: "/settings/gestures",
+      views: {
+          'sidebarContent': {
+              templateUrl: "js/settings/gestures/gestures.tpl.html",
+              controller: 'GesturesCtrl'
+          }
+      }
+  })
+
+  .state('app.gestureActions', {
+      url: "/settings/gestures/:action",
+      views: {
+          'sidebarContent': {
+              templateUrl: "js/settings/gestures/actions/actions.tpl.html",
+              controller: 'ActionsCtrl'
+          }
+      }
+  })
+
   .state('app.charts', {
       url: "/charts",
       views: {

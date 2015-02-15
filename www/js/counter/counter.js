@@ -8,6 +8,10 @@ angular.module('clicker.counter', ['components.stopParentClick', 'components.cli
             decreaseCounter: clickData.removeLastClick,
             getClickData: function () {
                 return clickData.getClicks();
+            },
+            hold: function () {
+                _.times(5, $scope.CounterCtrl.increaseCounter);
             }
         };
+
     });
