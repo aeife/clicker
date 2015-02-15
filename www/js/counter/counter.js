@@ -1,10 +1,19 @@
 angular.module('clicker.counter', ['components.stopParentClick', 'components.clickData', 'components.settingsData'])
     .controller('CounterCtrl', function ($scope, clickData, settingsData, $timeout) {
+        var playSound = function () {
+            if (settingsData.sound) {
+                new Audio("audio/beep.wav").play();
+            }
+        };
+
         $scope.CounterCtrl = {
             getCount: function () {
                 return clickData.getClicks().length;
             },
-            increaseCounter: clickData.addClick,
+            increaseCounter: function () {
+                clickData.addClick();
+                playSound();
+            },
             decreaseCounter: clickData.removeLastClick,
             getClickData: function () {
                 return clickData.getClicks();
@@ -14,11 +23,10 @@ angular.module('clicker.counter', ['components.stopParentClick', 'components.cli
                     $timeout(function () {
                         settingsData.gestures[p.type].action.fn();
                     }, 0);
+                    playSound();
                 }
-
             }
         };
-
     })
     .directive('detectGestures', function($ionicGesture, settingsData) {
         return {

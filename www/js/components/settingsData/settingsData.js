@@ -6,6 +6,7 @@ angular.module('components.settingsData', ['components.clickData'])
                 {name: 'dark'}
             ],
             activeTheme: null,
+            sound: false,
             gestureActions: {
                 none: {
                     id: 0,
@@ -49,12 +50,17 @@ angular.module('components.settingsData', ['components.clickData'])
                         }
                     }
 
+                },
+                sound: function (sound) {
+                    settingsData.sound = sound;
+                    window.localStorage['settings.sound'] = sound;
                 }
             },
             reset: function () {
                 settingsData.change.theme(settingsData.themes[0]);
                 settingsData.change.gestureAction('hold', settingsData.gestureActions.addFiveClicks);
                 settingsData.change.gestureAction('swipeleft', settingsData.gestureActions.none);
+                settingsData.change.sound(false);
             }
         };
 
@@ -65,6 +71,7 @@ angular.module('components.settingsData', ['components.clickData'])
             ||  settingsData.gestureActions.addFiveClicks;
         settingsData.gestures.swipeleft.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipeleft']]
             ||  settingsData.gestureActions.none;
+        settingsData.sound = JSON.parse(window.localStorage['settings.sound'] || 'false') || false;
 
         return settingsData;
     });

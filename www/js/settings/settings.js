@@ -7,9 +7,6 @@ angular.module('clicker.settings', [
 ])
     .controller('SettingsCtrl', function ($scope, settingsData, $cordovaDialogs, $ionicPlatform, clickData) {
         $scope.SettingsCtrl = {
-            getActiveTheme: function () {
-               return settingsData.activeTheme.name;
-            },
             resetClickData: function() {
                 $ionicPlatform.ready(function() {
                     var confirm = $cordovaDialogs.confirm('Warning! This will reset your counter and all statistics.',
@@ -29,6 +26,7 @@ angular.module('clicker.settings', [
                             }
                         });
                 });
-            }
+            },
+            settingsData: settingsData
         };
     });
