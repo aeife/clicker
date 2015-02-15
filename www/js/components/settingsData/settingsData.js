@@ -38,18 +38,22 @@ angular.module('components.settingsData', ['components.clickData'])
             change: {
                 theme: function (theme) {
                     settingsData.activeTheme = theme;
+                    window.localStorage['settings.activeTheme'] = JSON.stringify(theme);
                 },
                 gestureAction: function (gesture, action) {
                     settingsData.gestures[gesture].action = action;
+                    window.localStorage['settings.gestures.' + gesture] = JSON.stringify(settingsData.gestures[gesture].action);
                 }
             }
         };
 
         // defaults
-        settingsData.activeTheme = settingsData.themes[0];
-        settingsData.gestures.hold.action = settingsData.gestureActions.addFiveClicks;
-        settingsData.gestures.swipeleft.action = settingsData.gestureActions.none;
-        settingsData.gestures.swipeleft.action = settingsData.gestureActions.removeLastClick;
+        settingsData.activeTheme = JSON.parse(window.localStorage['settings.activeTheme'] || 'false')
+            || settingsData.themes[0];
+        settingsData.gestures.hold.action = JSON.parse(window.localStorage['settings.gestures.hold'] || 'false')
+            ||  settingsData.gestureActions.addFiveClicks;
+        settingsData.gestures.swipeleft.action = JSON.parse(window.localStorage['settings.gestures.swipeleft'] || 'false')
+            ||  settingsData.gestureActions.none;
 
         return settingsData;
     });
