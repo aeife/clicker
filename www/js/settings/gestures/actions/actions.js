@@ -1,4 +1,4 @@
-angular.module('clicker.settings.gestures.actions', ['components.settingsData'])
+angular.module('clicker.settings.gestures.actions', ['components.settingsData', 'components.orderObjectBy'])
     .controller('ActionsCtrl', function ($scope, $stateParams, settingsData) {
         $scope.ActionsCtrl = {
             actions: settingsData.gestureActions,

@@ -1,7 +1,7 @@
 <ion-view view-title="{{ActionsCtrl.gesture.name}}">
     <ion-content>
         <ion-list>
-            <ion-item ng-repeat="action in ActionsCtrl.actions"
+            <ion-item ng-repeat="action in ActionsCtrl.actions | orderObjectBy:'id'"
                       ng-click="ActionsCtrl.setAction(action)"
                       class="item-icon-right"
                       ng-class="{'active': ActionsCtrl.gesture.action == action}">
