@@ -42,7 +42,13 @@ angular.module('components.settingsData', ['components.clickData'])
                 },
                 gestureAction: function (gesture, action) {
                     settingsData.gestures[gesture].action = action;
-                    window.localStorage['settings.gestures.' + gesture] = JSON.stringify(settingsData.gestures[gesture].action);
+                    for (var gestureAction in settingsData.gestureActions) {
+                        if (settingsData.gestureActions[gestureAction].id === action.id) {
+                            window.localStorage['settings.gestures.' + gesture] = gestureAction;
+                            return;
+                        }
+                    }
+
                 }
             }
         };
@@ -50,9 +56,9 @@ angular.module('components.settingsData', ['components.clickData'])
         // defaults
         settingsData.activeTheme = JSON.parse(window.localStorage['settings.activeTheme'] || 'false')
             || settingsData.themes[0];
-        settingsData.gestures.hold.action = JSON.parse(window.localStorage['settings.gestures.hold'] || 'false')
+        settingsData.gestures.hold.action = settingsData.gestureActions[window.localStorage['settings.gestures.hold']]
             ||  settingsData.gestureActions.addFiveClicks;
-        settingsData.gestures.swipeleft.action = JSON.parse(window.localStorage['settings.gestures.swipeleft'] || 'false')
+        settingsData.gestures.swipeleft.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipeleft']]
             ||  settingsData.gestureActions.none;
 
         return settingsData;
