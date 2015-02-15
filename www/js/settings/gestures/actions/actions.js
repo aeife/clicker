@@ -4,7 +4,7 @@ angular.module('clicker.settings.gestures.actions', ['components.settingsData', 
             actions: settingsData.gestureActions,
             gesture: settingsData.gestures[$stateParams.action],
             setAction: function (action) {
-                settingsData.gestures[$stateParams.action].action = action;
+                settingsData.change.gestureAction($stateParams.action, action);
             }
         };
     });

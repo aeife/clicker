@@ -3,7 +3,7 @@ angular.module('clicker.settings.theme', [])
         $scope.ThemeCtrl = {
             themes: settingsData.themes,
             setActiveTheme: function (theme) {
-                settingsData.activeTheme = theme;
+                settingsData.change.theme(theme);
             }
         };
     });

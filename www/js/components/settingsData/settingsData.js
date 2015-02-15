@@ -34,6 +34,14 @@ angular.module('components.settingsData', ['components.clickData'])
                     name: 'Swipe Left',
                     action: null
                 }
+            },
+            change: {
+                theme: function (theme) {
+                    settingsData.activeTheme = theme;
+                },
+                gestureAction: function (gesture, action) {
+                    settingsData.gestures[gesture].action = action;
+                }
             }
         };
 
