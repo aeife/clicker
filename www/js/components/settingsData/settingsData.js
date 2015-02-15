@@ -18,6 +18,11 @@ angular.module('components.settingsData', ['components.clickData'])
                     fn: function () {
                         clickData.addNClicks(5);
                     }
+                },
+                removeLastClick: {
+                    id: 2,
+                    name: 'Remove Last Click',
+                    fn: clickData.removeLastClick
                 }
             },
             gestures: {
@@ -32,9 +37,11 @@ angular.module('components.settingsData', ['components.clickData'])
             }
         };
 
+        // defaults
         settingsData.activeTheme = settingsData.themes[0];
         settingsData.gestures.hold.action = settingsData.gestureActions.addFiveClicks;
         settingsData.gestures.swipeleft.action = settingsData.gestureActions.none;
+        settingsData.gestures.swipeleft.action = settingsData.gestureActions.removeLastClick;
 
         return settingsData;
     });

@@ -13,7 +13,7 @@ angular.module('components.clickData', [])
                 _.times(n, clickData.addClick);
             },
             removeLastClick: function () {
-
+                _clicks.pop();
             }
         };
 
