@@ -49,22 +49,29 @@ angular.module('clicker.charts', ['chart.js', 'components.clickData'])
         };
 
         $scope.ChartsCtrl = {
-            chart: {
-                labels: [],
-                series: [],
-                data: []
+            charts: {
+                sum: {
+                    labels: [],
+                    series: [],
+                    data: []
+                },
+                rate: {
+                    labels: [],
+                    series: [],
+                    data: []
+                }
             },
             statistics: {
                 perSecond: 0,
                 perMinute: 0,
                 perHour: 0
             },
-            generateCharts: function (options) {
-                $scope.ChartsCtrl.chart.data[0] = calculateChart(options);
-                if ($scope.ChartsCtrl.chart.data[0] && $scope.ChartsCtrl.chart.data[0].length > 0) {
-                    $scope.ChartsCtrl.chart.labels = [];
-                    $scope.ChartsCtrl.chart.data[0].forEach(function (dataPoint, index) {
-                        $scope.ChartsCtrl.chart.labels.push('');
+            generateCharts: function (target, options) {
+                target.data[0] = calculateChart(options);
+                if (target.data[0] && target.data[0].length > 0) {
+                    target.labels = [];
+                    target.data[0].forEach(function (dataPoint, index) {
+                        target.labels.push('');
                     });
                 }
             },
@@ -81,7 +88,8 @@ angular.module('clicker.charts', ['chart.js', 'components.clickData'])
 
         $scope.$on('$stateChangeSuccess',function(event, toState){
             if (toState.name === 'app.charts') {
-                $scope.ChartsCtrl.generateCharts({sum: true, dataPoints: 20});
+                $scope.ChartsCtrl.generateCharts($scope.ChartsCtrl.charts.sum, {sum: true, dataPoints: 20});
+                $scope.ChartsCtrl.generateCharts($scope.ChartsCtrl.charts.rate, {sum: false, dataPoints: 20});
                 $scope.ChartsCtrl.generateStatistics();
             }
         });
