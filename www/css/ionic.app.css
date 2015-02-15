@@ -7012,13 +7012,16 @@ a.button {
   -webkit-align-items: center; }
 
 .counter-label {
-  width: 60vh;
-  height: 60vh;
-  line-height: 60vh;
+  width: 50vh;
+  height: 50vh;
+  line-height: 50vh;
   text-align: center;
-  font-size: 20vh;
+  font-size: 16.66667vh;
   color: orange;
-  border: 6px solid #e39100;
+  margin: 0; }
+
+.counter-circle {
+  border: 10px solid #e39100;
   border-radius: 100%; }
 
 .fullscreen-content {

@@ -4,7 +4,7 @@ $sidebar-header-bg: #424242;
 $sidebar-border: #616161;
 $sidebar-color: #c0c0c0;
 
-$counter-size: 60vh;
+$counter-size: 50vh;
 $counter-color: #e39100;
 
 .center-content {
@@ -21,7 +21,11 @@ $counter-color: #e39100;
   text-align: center;
   font-size: $counter-size / 3;
   color: orange;
-  border: 6px solid $counter-color;
+  margin: 0;
+}
+
+.counter-circle {
+  border: 10px solid $counter-color;
   border-radius: 100%;
 }
 
