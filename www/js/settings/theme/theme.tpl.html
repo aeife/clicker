@@ -2,7 +2,7 @@
     <ion-content>
         <ion-list>
             <ion-item ng-repeat="theme in ThemeCtrl.themes" ng-click="ThemeCtrl.setActiveTheme(theme)"
-                      ng-class="{'active': ThemeCtrl.getActiveTheme() == theme}">
+                      ng-class="{'active': ThemeCtrl.getActiveTheme().name == theme.name}">
                 {{theme.name}}
             </ion-item>
         </ion-list>
