@@ -4,13 +4,16 @@
                 legend="true" series="ChartsCtrl.chart.series" click="onClick"></canvas>
         <ion-list>
             <ion-item>
-                clicks per second: {{ChartsCtrl.statistics.perSecond | number: 2}}
+                clicks per second
+                <div class="item-note">{{ChartsCtrl.statistics.perSecond | number: 2}}</div>
             </ion-item>
             <ion-item>
-                clicks per minute: {{ChartsCtrl.statistics.perMinute | number: 2}}
+                clicks per minute
+                <div class="item-note">{{ChartsCtrl.statistics.perMinute | number: 2}}</div>
             </ion-item>
             <ion-item>
-                clicks per hour: {{ChartsCtrl.statistics.perHour | number: 2}}
+                clicks per hour
+                <div class="item-note">{{ChartsCtrl.statistics.perHour | number: 2}}</div>
             </ion-item>
         </ion-list>
     </ion-content>
