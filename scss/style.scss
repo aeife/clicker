@@ -1,3 +1,9 @@
+$sidebar-bg: #4e4e4e;
+$sidebar-bg-active: #737373;
+$sidebar-header-bg: #424242;
+$sidebar-border: #616161;
+$sidebar-color: #c0c0c0;
+
 .center-content {
   height: 100%;
   display: -webkit-flex;
@@ -23,3 +29,26 @@
   border: 6px solid black;
   border-radius: 100%;
 }
+
+.menu.menu-left {
+  .bar.bar-stable {
+    background-color: $sidebar-header-bg;
+    background-image: none;
+
+    .title {
+      color: $sidebar-color;
+    }
+  }
+
+  .item-content, .item {
+    background-color: $sidebar-bg;
+    border-color: $sidebar-border;
+    color: $sidebar-color;
+
+    &:active {
+      background-color: $sidebar-bg-active;
+    }
+  }
+}
+
+
