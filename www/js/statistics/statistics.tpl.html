@@ -31,6 +31,23 @@
                     clicks per hour
                     <div class="item-note">{{StatisticsCtrl.statistics.perHour | number: 2}}</div>
                 </ion-item>
+                <ion-item class="item-divider">
+                    More Information
+                </ion-item>
+                <ion-item>
+                    Duration
+                    <div class="item-note">
+                        {{(StatisticsCtrl.clicks.last.time - StatisticsCtrl.clicks.first.time)  / 1000 / 60 | number: 1}} min
+                    </div>
+                </ion-item>
+                <ion-item>
+                    First Click
+                    <div class="item-note">{{StatisticsCtrl.clicks.first.time | date:'medium'}}</div>
+                </ion-item>
+                <ion-item>
+                    Last Click
+                    <div class="item-note">{{StatisticsCtrl.clicks.last.time | date:'medium'}}</div>
+                </ion-item>
             </div>
         </ion-list>
     </ion-content>

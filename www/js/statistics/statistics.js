@@ -83,6 +83,10 @@ angular.module('clicker.statistics', ['chart.js', 'components.clickData'])
                     $scope.StatisticsCtrl.statistics.perMinute = clickData.getClicks().length / Math.abs(totalTime / 1000 / 60);
                     $scope.StatisticsCtrl.statistics.perHour = clickData.getClicks().length / Math.abs(totalTime / 1000 / 60 / 60);
                 }
+            },
+            clicks: {
+                first: null,
+                last: null
             }
         };
 
@@ -91,6 +95,8 @@ angular.module('clicker.statistics', ['chart.js', 'components.clickData'])
                 $scope.StatisticsCtrl.generateCharts($scope.StatisticsCtrl.charts.sum, {sum: true, dataPoints: 20});
                 $scope.StatisticsCtrl.generateCharts($scope.StatisticsCtrl.charts.rate, {sum: false, dataPoints: 20});
                 $scope.StatisticsCtrl.generateStatistics();
+                $scope.StatisticsCtrl.clicks.first = _.first(clickData.getClicks());
+                $scope.StatisticsCtrl.clicks.last = _.last(clickData.getClicks());
             }
         });
     });
