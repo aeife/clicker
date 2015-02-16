@@ -6,7 +6,6 @@ angular.module('clicker.export', ['ngCordova', 'components.clickData'])
 
         $scope.ExportCtrl = {
             email: function () {
-                console.log(generateJSON(clickData.getClicks()));
                 $cordovaEmailComposer.isAvailable().then(function() {
                     var email = {
                         //to: 'max@mustermann.de',
