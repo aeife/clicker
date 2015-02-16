@@ -1,0 +1,38 @@
+<ion-view view-title="About">
+    <ion-content>
+        <ion-list>
+            <div class="card">
+                <ion-item class="item-divider">
+                    Support
+                </ion-item>
+                <ion-item ng-click="AboutCtrl.supportEmail()">
+                    <!-- TODO: adjust website and link via inapp browser -->
+                    Website
+                    <div class="item-note">http://www.clicker.com</div>
+                </ion-item>
+                <ion-item ng-click="AboutCtrl.supportEmail()">
+                    <!-- TODO: adjust email -->
+                    E-Mail
+                    <div class="item-note">support@clicker.com</div>
+                </ion-item>
+            </div>
+            <div class="card">
+                <ion-item class="item-divider">
+                    Author
+                </ion-item>
+                <ion-item>
+                    André Eife
+                </ion-item>
+                <ion-item onclick="window.open('twitter://twitter.com/a_eife', '_system', 'location=yes');">
+                    Twitter
+                    <div class="item-note">@a_eife</div>
+                </ion-item>
+                <ion-item>
+                    <!-- TODO: link to website via inapp browser -->
+                    Website
+                    <div class="item-note">http://www.andre-eife.com/</div>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

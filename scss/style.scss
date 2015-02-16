@@ -95,4 +95,11 @@ $counter-color: #e39100;
   }
 }
 
+.sidebar-footer {
+  height: 52px;
+  padding: 0;
 
+  ion-list {
+    width: 100%;
+  }
+}

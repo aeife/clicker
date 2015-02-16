@@ -10,6 +10,7 @@ angular.module('clicker', ['ionic',
     'clicker.settings',
     'clicker.statistics',
     'clicker.export',
+    'clicker.about',
     'components.settingsData'
 ])
 
@@ -97,6 +98,15 @@ angular.module('clicker', ['ionic',
                     'sidebarContent': {
                         templateUrl: "js/export/export.tpl.html",
                         controller: 'ExportCtrl'
+                    }
+                }
+            })
+            .state('app.about', {
+                url: "/about",
+                views: {
+                    'sidebarContent': {
+                        templateUrl: "js/about/about.tpl.html",
+                        controller: 'AboutCtrl'
                     }
                 }
             });
