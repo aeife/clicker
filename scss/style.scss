@@ -47,7 +47,7 @@ $counter-color: #e39100;
     display: block;
     margin-left: 30vh;
     margin-top: 0vh;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     z-index: -1;
   }
 }
