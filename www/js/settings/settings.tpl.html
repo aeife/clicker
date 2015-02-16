@@ -14,6 +14,9 @@
             <ion-toggle ng-checked="SettingsCtrl.settingsData.sound"
                         ng-click="SettingsCtrl.settingsData.change.sound(!SettingsCtrl.settingsData.sound)"
                         toggle-class="toggle-calm">Sound</ion-toggle>
+            <ion-toggle ng-checked="SettingsCtrl.settingsData.animation"
+                        ng-click="SettingsCtrl.settingsData.change.animation(!SettingsCtrl.settingsData.animation)"
+                        toggle-class="toggle-calm">Animation</ion-toggle>
             <ion-item class="item-divider">Reset</ion-item>
             <ion-item ng-click="SettingsCtrl.resetClickData()">
                 Click Data

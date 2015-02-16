@@ -25,6 +25,9 @@ angular.module('clicker.counter', ['components.stopParentClick', 'components.cli
                     }, 0);
                     playSound();
                 }
+            },
+            getAnimation: function () {
+                return settingsData.animation;
             }
         };
     })

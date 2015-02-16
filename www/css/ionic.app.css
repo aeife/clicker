@@ -7022,7 +7022,34 @@ a.button {
 
 .counter-circle {
   border: 10px solid #e39100;
-  border-radius: 100%; }
+  border-radius: 100%;
+  z-index: 1; }
+
+.rotate-circle {
+  display: block;
+  position: absolute;
+  height: 50vh;
+  width: 50vh;
+  z-index: -1;
+  -webkit-animation: rotation 60s infinite linear; }
+  .rotate-circle:before {
+    content: " ";
+    background-color: white;
+    width: 15vh;
+    height: 25vh;
+    position: absolute;
+    display: block;
+    margin-left: 30vh;
+    margin-top: 0vh;
+    transform: rotate(45deg);
+    z-index: -1; }
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(359deg); } }
 
 .fullscreen-content {
   position: absolute;

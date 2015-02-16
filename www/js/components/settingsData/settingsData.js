@@ -7,6 +7,7 @@ angular.module('components.settingsData', ['components.clickData'])
             ],
             activeTheme: null,
             sound: false,
+            animation: false,
             gestureActions: {
                 none: {
                     id: 0,
@@ -54,6 +55,10 @@ angular.module('components.settingsData', ['components.clickData'])
                 sound: function (sound) {
                     settingsData.sound = sound;
                     window.localStorage['settings.sound'] = sound;
+                },
+                animation: function (animation) {
+                    settingsData.animation = animation;
+                    window.localStorage['settings.animation'] = animation;
                 }
             },
             reset: function () {
@@ -72,6 +77,7 @@ angular.module('components.settingsData', ['components.clickData'])
         settingsData.gestures.swipeleft.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipeleft']]
             ||  settingsData.gestureActions.none;
         settingsData.sound = JSON.parse(window.localStorage['settings.sound'] || 'false') || false;
+        settingsData.animation = JSON.parse(window.localStorage['settings.animation'] || 'false') || false;
 
         return settingsData;
     });
