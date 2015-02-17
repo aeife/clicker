@@ -1,5 +1,5 @@
 angular.module('clicker.about', [])
-    .controller('AboutCtrl', function ($scope, $cordovaEmailComposer, $ionicPlatform) {
+    .controller('AboutCtrl', function ($scope, $cordovaEmailComposer, $ionicPlatform, $ionicModal) {
         $scope.AboutCtrl = {
             supportEmail: function () {
                 var device = ionic.Platform.device();
@@ -15,6 +15,11 @@ angular.module('clicker.about', [])
                     $cordovaEmailComposer.open(email).then(null, function () {
                         // user cancelled email
                     });
+                });
+            },
+            openIntroduction: function () {
+                $ionicModal.fromTemplateUrl('js/introduction/introduction.tpl.html', {}).then(function(modal) {
+                    modal.show();
                 });
             }
         };
