@@ -1,5 +1,5 @@
 angular.module('clicker.counter', ['components.stopParentClick', 'components.clickData', 'components.settingsData'])
-    .controller('CounterCtrl', function ($scope, clickData, settingsData, $timeout) {
+    .controller('CounterCtrl', function ($scope, clickData, settingsData, $timeout, $ionicModal) {
         var playSound = function () {
             if (settingsData.sound) {
                 new Audio("audio/beep.wav").play();
@@ -30,6 +30,14 @@ angular.module('clicker.counter', ['components.stopParentClick', 'components.cli
                 return settingsData.animation;
             }
         };
+
+        if (!settingsData.skipIntroduction) {
+            $ionicModal.fromTemplateUrl('js/introduction/introduction.tpl.html', {}).then(function(modal) {
+                modal.show();
+                // only show introduction at the first start
+                settingsData.change.skipIntroduction(true);
+            });
+        }
     })
     .directive('detectGestures', function($ionicGesture, settingsData) {
         return {

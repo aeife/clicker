@@ -7082,3 +7082,21 @@ a.button {
   padding: 0; }
   .sidebar-footer ion-list {
     width: 100%; }
+
+.fullscreen-modal {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  .fullscreen-modal .slider {
+    width: 100%;
+    height: 100%; }
+
+.modal-bottom-content {
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  text-align: center; }
+  .modal-bottom-content a {
+    text-decoration: none;
+    color: inherit; }

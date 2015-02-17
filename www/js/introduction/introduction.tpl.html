@@ -1,0 +1,45 @@
+<ion-modal-view class="fullscreen-modal">
+    <ion-header-bar>
+        <h1 class="title">Introduction</h1>
+    </ion-header-bar>
+    <ion-content scroll="false">
+        <ion-slide-box>
+            <ion-slide class="text-center">
+                LOGO
+                <!-- TODO: adust app name -->
+                <h2>Welcome to Clicker!</h2>
+                <p>Clicker allows you to quickly count and provides you with all customization and statistics you will need.</p>
+            </ion-slide>
+            <ion-slide class="text-center">
+                <h2>The Counter</h2>
+                <p>The heart of this application is the simple to use counter. Just click on every part of your touchscreen to increase the counter.</p>
+                <p>The current counter is shown in the middle so you always see the amount.</p>
+                <p>Try out some gestures like swiping or holding the finger on your screen. This will allow you to handle further action.</p>
+            </ion-slide>
+            <ion-slide class="text-center">
+                <h2>Customization</h2>
+                <!-- TODO: adjust app name -->
+                <p>Want to change the look or behavior of clicker? No Problem.</p>
+                <p>The settings view allows you to choose a theme and enable animations and sound. Make clicker your own.</p>
+                <p>You can also change the action for each gesture which you can use on the counter view. Every gesture can be combined with every action.</p>
+            </ion-slide>
+            <ion-slide class="text-center">
+                <h2>Statistics</h2>
+                <p>All the information you will need can be viewed on the statistics page.</p>
+                <p>Charts with detailed trends of your clicks, information about the click amount per time and various other information.</p>
+                <p>You can also export these statistics!</p>
+            </ion-slide>
+            <ion-slide class="text-center">
+                <h2>Let's go</h2>
+                <!-- TODO: adjust app name -->
+                <p>That is all to know about clicker.</p>
+                <p>Have fun and start clicking.</p>
+                <button class="button" ng-click="modal.remove()">Start using clicker</button>
+            </ion-slide>
+        </ion-slide-box>
+        <div class="modal-bottom-content">
+            <a href ng-click="modal.remove()">Skip Introduction</a>
+        </div>
+
+    </ion-content>
+</ion-modal-view>

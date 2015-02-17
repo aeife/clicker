@@ -8,6 +8,7 @@ angular.module('components.settingsData', ['components.clickData'])
             activeTheme: null,
             sound: false,
             animation: false,
+            skipIntroduction: false,
             gestureActions: {
                 none: {
                     id: 0,
@@ -59,6 +60,10 @@ angular.module('components.settingsData', ['components.clickData'])
                 animation: function (animation) {
                     settingsData.animation = animation;
                     window.localStorage['settings.animation'] = animation;
+                },
+                skipIntroduction: function (skipIntroduction) {
+                    settingsData.skipIntroduction = skipIntroduction;
+                    window.localStorage['settings.skipIntroduction'] = skipIntroduction;
                 }
             },
             reset: function () {
@@ -78,6 +83,7 @@ angular.module('components.settingsData', ['components.clickData'])
             ||  settingsData.gestureActions.none;
         settingsData.sound = JSON.parse(window.localStorage['settings.sound'] || 'false') || false;
         settingsData.animation = JSON.parse(window.localStorage['settings.animation'] || 'false') || false;
+        settingsData.skipIntroduction = JSON.parse(window.localStorage['settings.skipIntroduction'] || 'false') || false;
 
         return settingsData;
     });
