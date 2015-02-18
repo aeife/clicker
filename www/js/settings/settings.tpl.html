@@ -17,6 +17,9 @@
             <ion-toggle ng-checked="SettingsCtrl.settingsData.animation"
                         ng-click="SettingsCtrl.settingsData.change.animation(!SettingsCtrl.settingsData.animation)"
                         toggle-class="toggle-calm">Animation</ion-toggle>
+            <ion-toggle ng-checked="SettingsCtrl.settingsData.keepAwake"
+                        ng-click="SettingsCtrl.settingsData.change.keepAwake(!SettingsCtrl.settingsData.keepAwake)"
+                        toggle-class="toggle-calm">Keep Display Awake</ion-toggle>
             <ion-item class="item-divider">Reset</ion-item>
             <ion-item ng-click="SettingsCtrl.resetClickData()">
                 Click Data

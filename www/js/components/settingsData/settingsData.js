@@ -1,5 +1,15 @@
 angular.module('components.settingsData', ['components.clickData'])
-    .service('settingsData', function (clickData) {
+    .service('settingsData', function (clickData, $ionicPlatform) {
+        var setWakeLock = function (wakeLock) {
+            $ionicPlatform.ready(function () {
+                if (window.cordova && wakeLock) {
+                    window.plugins.insomnia.keepAwake();
+                } else if (window.cordova && !wakeLock) {
+                    window.plugins.insomnia.allowSleepAgain();
+                }
+            });
+        };
+
         var settingsData = {
             themes: [
                 {name: 'light'},
@@ -9,6 +19,7 @@ angular.module('components.settingsData', ['components.clickData'])
             sound: false,
             animation: false,
             skipIntroduction: false,
+            keepAwake: true,
             gestureActions: {
                 none: {
                     id: 0,
@@ -64,6 +75,11 @@ angular.module('components.settingsData', ['components.clickData'])
                 skipIntroduction: function (skipIntroduction) {
                     settingsData.skipIntroduction = skipIntroduction;
                     window.localStorage['settings.skipIntroduction'] = skipIntroduction;
+                },
+                keepAwake: function (keepAwake) {
+                    settingsData.keepAwake = keepAwake;
+                    window.localStorage['settings.keepAwake'] = keepAwake;
+                    setWakeLock(keepAwake);
                 }
             },
             reset: function () {
@@ -84,6 +100,11 @@ angular.module('components.settingsData', ['components.clickData'])
         settingsData.sound = JSON.parse(window.localStorage['settings.sound'] || 'false') || false;
         settingsData.animation = JSON.parse(window.localStorage['settings.animation'] || 'false') || false;
         settingsData.skipIntroduction = JSON.parse(window.localStorage['settings.skipIntroduction'] || 'false') || false;
+        if (window.localStorage['settings.keepAwake'] === 'false') {
+            settingsData.keepAwake = false;
+        } else {
+            setWakeLock(true);
+        }
 
         return settingsData;
     });
