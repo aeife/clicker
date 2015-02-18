@@ -1,8 +1,20 @@
 angular.module('clicker.counter', ['components.stopParentClick', 'components.clickData', 'components.settingsData'])
     .controller('CounterCtrl', function ($scope, clickData, settingsData, $timeout, $ionicModal) {
+        // initialize sound several times so it can be played fast in sequence
+        // pre initialization for performance reasons
+        var sounds = [];
+        _.times(10, function () {
+            sounds.push(new Audio("audio/beep.wav"));
+        });
+        var soundCounter = 0;
+
         var playSound = function () {
             if (settingsData.sound) {
-                new Audio("audio/beep.wav").play();
+                sounds[soundCounter].play();
+                soundCounter++;
+                if (soundCounter > 9) {
+                    soundCounter = 0;
+                }
             }
         };
 
