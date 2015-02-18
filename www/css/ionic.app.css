@@ -7100,3 +7100,6 @@ a.button {
   .modal-bottom-content a {
     text-decoration: none;
     color: inherit; }
+
+.text-small {
+  color: #616161; }

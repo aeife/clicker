@@ -1,9 +1,15 @@
 <ion-view view-title="About">
     <ion-content>
+        <div class="text-center">
+            <h1>Clicker</h1>
+            <p class="text-small">Made with <i class="ion-heart"></i></p>
+            <small class="text-small">by André Eife</small>
+        </div>
         <ion-list>
             <div class="card">
                 <ion-item class="item-divider">
                     Support
+                    <div class="item-note">Questions, problems or feature requests?</div>
                 </ion-item>
                 <ion-item ng-click="AboutCtrl.openIntroduction()">
                     Introduction
@@ -22,9 +28,7 @@
             <div class="card">
                 <ion-item class="item-divider">
                     Author
-                </ion-item>
-                <ion-item>
-                    André Eife
+                    <div class="item-note">André Eife</div>
                 </ion-item>
                 <ion-item onclick="window.open('http://twitter.com/a_eife', '_system', 'location=yes');">
                     Twitter
