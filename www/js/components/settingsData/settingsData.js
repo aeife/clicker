@@ -37,6 +37,18 @@ angular.module('components.settingsData', ['components.clickData'])
                     id: 2,
                     name: 'Remove Last Click',
                     fn: clickData.removeLastClick
+                },
+                removeLastFiveClicks: {
+                    id: 3,
+                    name: 'Remove Last Five Clicks',
+                    fn: function () {
+                        clickData.removeLastNClicks(5);
+                    }
+                },
+                reset: {
+                    id: 4,
+                    name: 'Quick Reset Counter',
+                    fn: clickData.reset
                 }
             },
             gestures: {
@@ -46,6 +58,18 @@ angular.module('components.settingsData', ['components.clickData'])
                 },
                 swipeleft: {
                     name: 'Swipe Left',
+                    action: null
+                },
+                swiperight: {
+                    name: 'Swipe Right',
+                    action: null
+                },
+                swipeup: {
+                    name: 'Swipe Up',
+                    action: null
+                },
+                swipedown: {
+                    name: 'Swipe Down',
                     action: null
                 }
             },
@@ -84,8 +108,11 @@ angular.module('components.settingsData', ['components.clickData'])
             },
             reset: function () {
                 settingsData.change.theme(settingsData.themes[0]);
-                settingsData.change.gestureAction('hold', settingsData.gestureActions.addFiveClicks);
-                settingsData.change.gestureAction('swipeleft', settingsData.gestureActions.none);
+                settingsData.change.gestureAction('hold', settingsData.gestureActions.none);
+                settingsData.change.gestureAction('swipeleft', settingsData.gestureActions.removeLastClick);
+                settingsData.change.gestureAction('swiperight', settingsData.gestureActions.none);
+                settingsData.change.gestureAction('swipeup', settingsData.gestureActions.addFiveClicks);
+                settingsData.change.gestureAction('swipedown', settingsData.gestureActions.removeLastFiveClicks);
                 settingsData.change.sound(false);
             }
         };
@@ -94,9 +121,15 @@ angular.module('components.settingsData', ['components.clickData'])
         settingsData.activeTheme = JSON.parse(window.localStorage['settings.activeTheme'] || 'false')
             || settingsData.themes[0];
         settingsData.gestures.hold.action = settingsData.gestureActions[window.localStorage['settings.gestures.hold']]
-            ||  settingsData.gestureActions.addFiveClicks;
-        settingsData.gestures.swipeleft.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipeleft']]
             ||  settingsData.gestureActions.none;
+        settingsData.gestures.swipeleft.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipeleft']]
+            ||  settingsData.gestureActions.removeLastClick;
+        settingsData.gestures.swiperight.action = settingsData.gestureActions[window.localStorage['settings.gestures.swiperight']]
+        ||  settingsData.gestureActions.none;
+        settingsData.gestures.swipeup.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipeup']]
+        ||  settingsData.gestureActions.addFiveClicks;
+        settingsData.gestures.swipedown.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipedown']]
+        ||  settingsData.gestureActions.removeLastFiveClicks;
         settingsData.sound = JSON.parse(window.localStorage['settings.sound'] || 'false') || false;
         settingsData.animation = JSON.parse(window.localStorage['settings.animation'] || 'false') || false;
         settingsData.skipIntroduction = JSON.parse(window.localStorage['settings.skipIntroduction'] || 'false') || false;
