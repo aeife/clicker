@@ -9,34 +9,43 @@
     }
   }
 
-  .item, .item-content, .item-toggle {
-    background-color: $item-bg;
-    border-color: $item-border;
-    color: $item-text-color;
+  .sidebarContent {
+    .item, .item-content, .item-toggle {
+      background-color: $item-bg;
+      border-color: $item-border;
+      color: $item-text-color;
 
-    p {
-      color: $item-subtext-color;
+      p {
+        color: $item-subtext-color;
+      }
+
+      &.activated {
+        background-color: $item-bg-active;
+      }
+
+      .item-note, .icon {
+        color: $item-note-text-color;
+      }
     }
 
-    &.activated {
-      background-color: $item-bg-active;
-    }
+    .item-divider {
+      background-color: $item-divider-bg;
 
-    .item-note, .icon {
-      color: $item-note-text-color;
     }
   }
 
-  .item-divider {
-    background-color: $item-divider-bg;
 
-  }
+
 
   .bar-header {
     background-color: $header-bg;
     border-color: $item-border;
 
     .title {
+      color: $header-text-color;
+    }
+
+    .button.button-clear {
       color: $header-text-color;
     }
   }

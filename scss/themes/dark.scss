@@ -1,17 +1,17 @@
 $item-bg: grey;
-$item-bg-active: #939393;
-$item-divider-bg: #575757;
-$item-border: #949494;
-$item-text-color: #cbcbcb;
-$item-subtext-color: #b3b3b3;
-$item-note-text-color: #d9d9d9;
-$header-bg: grey;
-$header-text-color: white;
-$toggle-color: #4b4b4b;
-$toggle-color2: #a5a5a5;
-$toggle-handle-color: #959595;
-$toggle-handle-color2: #959595;
-$counter-color: #464646;
+$item-bg-active: lighten($item-bg, 5);
+$item-divider-bg: darken($item-bg, 5);
+$item-border: lighten($item-bg, 5);
+$item-text-color: lighten($item-bg, 30);
+$item-subtext-color: lighten($item-bg, 20);
+$item-note-text-color: $item-subtext-color;
+$header-bg: $item-bg;
+$header-text-color: lighten($item-bg, 40);
+$toggle-color: darken($item-bg, 20);
+$toggle-color2: lighten($item-bg, 20);
+$toggle-handle-color: lighten($item-bg, 35);
+$toggle-handle-color2: $toggle-handle-color;
+$counter-color: darken($item-bg, 30);
 
 .dark {
   @include theme();
