@@ -19,6 +19,10 @@
         color: $item-subtext-color;
       }
 
+      &.active {
+        background-color: $item-bg-active;
+      }
+
       &.activated {
         background-color: $item-bg-active;
       }
