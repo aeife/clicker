@@ -31,27 +31,46 @@ angular.module('components.settingsData', ['components.clickData'])
                     name: 'None',
                     fn: function () {}
                 },
-                addFiveClicks: {
+                addClick: {
                     id: 1,
+                    name: 'Add A Click',
+                    fn: clickData.addClick
+                },
+                addFiveClicks: {
+                    id: 2,
                     name: 'Add Five Clicks',
                     fn: function () {
                         clickData.addNClicks(5);
                     }
                 },
+                addTenClicks: {
+                    id: 3,
+                    name: 'Add Ten Clicks',
+                    fn: function () {
+                        clickData.addNClicks(10);
+                    }
+                },
                 removeLastClick: {
-                    id: 2,
+                    id: 4,
                     name: 'Remove Last Click',
                     fn: clickData.removeLastClick
                 },
                 removeLastFiveClicks: {
-                    id: 3,
+                    id: 5,
                     name: 'Remove Last Five Clicks',
                     fn: function () {
                         clickData.removeLastNClicks(5);
                     }
                 },
+                removeLastTenClicks: {
+                    id: 6,
+                    name: 'Remove Last Ten Clicks',
+                    fn: function () {
+                        clickData.removeLastNClicks(10);
+                    }
+                },
                 reset: {
-                    id: 4,
+                    id: 7,
                     name: 'Quick Reset Counter',
                     fn: clickData.reset
                 }
@@ -115,7 +134,7 @@ angular.module('components.settingsData', ['components.clickData'])
                 settingsData.change.theme(settingsData.themes[0]);
                 settingsData.change.gestureAction('hold', settingsData.gestureActions.none);
                 settingsData.change.gestureAction('swipeleft', settingsData.gestureActions.removeLastClick);
-                settingsData.change.gestureAction('swiperight', settingsData.gestureActions.none);
+                settingsData.change.gestureAction('swiperight', settingsData.gestureActions.addClick);
                 settingsData.change.gestureAction('swipeup', settingsData.gestureActions.addFiveClicks);
                 settingsData.change.gestureAction('swipedown', settingsData.gestureActions.removeLastFiveClicks);
                 settingsData.change.sound(false);
@@ -130,7 +149,7 @@ angular.module('components.settingsData', ['components.clickData'])
         settingsData.gestures.swipeleft.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipeleft']]
             ||  settingsData.gestureActions.removeLastClick;
         settingsData.gestures.swiperight.action = settingsData.gestureActions[window.localStorage['settings.gestures.swiperight']]
-        ||  settingsData.gestureActions.none;
+        ||  settingsData.gestureActions.addClick;
         settingsData.gestures.swipeup.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipeup']]
         ||  settingsData.gestureActions.addFiveClicks;
         settingsData.gestures.swipedown.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipedown']]
