@@ -7116,6 +7116,8 @@ a.button {
     color: #b3b3b3; }
   .dark .item.activated, .dark .item-content.activated, .dark .item-toggle.activated {
     background-color: #939393; }
+  .dark .item .item-note, .dark .item .icon, .dark .item-content .item-note, .dark .item-content .icon, .dark .item-toggle .item-note, .dark .item-toggle .icon {
+    color: #d9d9d9; }
 .dark .item-divider {
   background-color: #575757; }
 .dark .bar-header {
@@ -7139,3 +7141,41 @@ a.button {
   color: #464646; }
 .dark .rotate-circle:before {
   background-color: grey; }
+
+.orange .bar-header {
+  background-image: none !important; }
+.orange .menu-content .scroll-content {
+  background-color: #e29400; }
+.orange .item, .orange .item-content, .orange .item-toggle {
+  background-color: #e29400;
+  border-color: #ad7400;
+  color: #797979; }
+  .orange .item p, .orange .item-content p, .orange .item-toggle p {
+    color: #747474; }
+  .orange .item.activated, .orange .item-content.activated, .orange .item-toggle.activated {
+    background-color: #f8ac00; }
+  .orange .item .item-note, .orange .item .icon, .orange .item-content .item-note, .orange .item-content .icon, .orange .item-toggle .item-note, .orange .item-toggle .icon {
+    color: #6f6f6f; }
+.orange .item-divider {
+  background-color: #dc9000; }
+.orange .bar-header {
+  background-color: #e29400;
+  border-color: #ad7400; }
+  .orange .bar-header .title {
+    color: #6f6f6f; }
+.orange .toggle.toggle-calm input:checked + .track {
+  background-color: #c68400;
+  border-color: #c68400; }
+  .orange .toggle.toggle-calm input:checked + .track .handle {
+    background-color: #d3bc6d; }
+.orange .toggle .track {
+  background-color: #efc300;
+  border-color: #efc300; }
+  .orange .toggle .track .handle {
+    background-color: #d3bc6d; }
+.orange .counter-circle {
+  border-color: #c80900; }
+.orange .counter-label {
+  color: #c80900; }
+.orange .rotate-circle:before {
+  background-color: #e29400; }

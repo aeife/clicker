@@ -1,0 +1,75 @@
+@mixin theme() {
+  .bar-header {
+    background-image: none !important;
+  }
+
+  .menu-content {
+    .scroll-content {
+      background-color: $item-bg;
+    }
+  }
+
+  .item, .item-content, .item-toggle {
+    background-color: $item-bg;
+    border-color: $item-border;
+    color: $item-text-color;
+
+    p {
+      color: $item-subtext-color;
+    }
+
+    &.activated {
+      background-color: $item-bg-active;
+    }
+
+    .item-note, .icon {
+      color: $item-note-text-color;
+    }
+  }
+
+  .item-divider {
+    background-color: $item-divider-bg;
+
+  }
+
+  .bar-header {
+    background-color: $header-bg;
+    border-color: $item-border;
+
+    .title {
+      color: $header-text-color;
+    }
+  }
+
+  .toggle.toggle-calm input:checked + .track {
+    background-color: $toggle-color;
+    border-color: $toggle-color;
+
+    .handle {
+      background-color: $toggle-handle-color;
+    }
+  }
+
+  .toggle .track {
+    background-color: $toggle-color2;
+    border-color: $toggle-color2;
+
+    .handle {
+      background-color: $toggle-handle-color2;
+    }
+  }
+
+  .counter-circle {
+    border-color: $counter-color;
+  }
+
+  .counter-label {
+    color: $counter-color;
+  }
+
+  .rotate-circle {
+    &:before {
+      background-color: $item-bg;
+    }
+  }
+}

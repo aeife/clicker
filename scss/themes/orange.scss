@@ -1,0 +1,18 @@
+$item-bg: #e29400;
+$item-bg-active: #f8ac00;
+$item-divider-bg: #dc9000;
+$item-border: #ad7400;
+$item-text-color: #797979;
+$item-subtext-color: #747474;
+$item-note-text-color: #6f6f6f;
+$header-bg: #e29400;
+$header-text-color: #6f6f6f;
+$toggle-color: #c68400;
+$toggle-color2: #efc300;
+$toggle-handle-color: #d3bc6d;
+$toggle-handle-color2: #d3bc6d;
+$counter-color: #c80900;
+
+.orange {
+  @include theme();
+}
