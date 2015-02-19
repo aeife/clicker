@@ -16,7 +16,8 @@ angular.module('components.settingsData', ['components.clickData'])
                 {name: 'dark'},
                 {name: 'orange'},
                 {name: 'blue'},
-                {name: 'green'}
+                {name: 'green'},
+                {name: 'mint'}
             ],
             activeTheme: null,
             sound: false,
