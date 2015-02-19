@@ -14,6 +14,10 @@ $counter-color: #e39100;
   -webkit-align-items: center;
 }
 
+.counter h1{
+  color: $counter-color;
+}
+
 .counter-label {
   width: $counter-size;
   height: $counter-size;
@@ -50,6 +54,14 @@ $counter-color: #e39100;
     -webkit-transform: rotate(45deg);
     z-index: -1;
   }
+}
+
+.counter-bottom-text {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+  text-align: center;
 }
 
 @-webkit-keyframes rotation {

@@ -25,6 +25,7 @@ angular.module('components.settingsData', ['components.clickData'])
             animation: false,
             skipIntroduction: false,
             keepAwake: true,
+            locked: false,
             gestureActions: {
                 none: {
                     id: 0,
@@ -73,6 +74,13 @@ angular.module('components.settingsData', ['components.clickData'])
                     id: 7,
                     name: 'Quick Reset Counter',
                     fn: clickData.reset
+                },
+                lock: {
+                    id: 8,
+                    name: 'Lock Counter',
+                    fn: function () {
+                        settingsData.locked = !settingsData.locked;
+                    }
                 }
             },
             gestures: {

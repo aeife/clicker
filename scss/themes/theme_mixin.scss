@@ -68,6 +68,10 @@
     }
   }
 
+  .counter h1{
+    color: $counter-color;
+  }
+
   .counter-circle {
     border-color: $counter-color;
   }

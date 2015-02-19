@@ -23,23 +23,32 @@ angular.module('clicker.counter', ['components.stopParentClick', 'components.cli
                 return clickData.getClicks().length;
             },
             increaseCounter: function () {
-                clickData.addClick();
-                playSound();
+                if (!settingsData.locked) {
+                    clickData.addClick();
+                    playSound();
+                }
             },
             decreaseCounter: clickData.removeLastClick,
             getClickData: function () {
                 return clickData.getClicks();
             },
             handleGesture: function (p) {
+
                 if (settingsData.gestures[p.type]) {
-                    $timeout(function () {
-                        settingsData.gestures[p.type].action.fn();
-                    }, 0);
-                    playSound();
+                    // is not locked or lock gesture
+                    if (!settingsData.locked || settingsData.gestures[p.type].action === settingsData.gestureActions.lock) {
+                        $timeout(function () {
+                            settingsData.gestures[p.type].action.fn();
+                        }, 0);
+                        playSound();
+                    }
                 }
             },
             getAnimation: function () {
                 return settingsData.animation;
+            },
+            getLockStatus: function () {
+                return settingsData.locked;
             }
         };
 
