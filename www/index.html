@@ -8,11 +8,6 @@
          <!-- compiled css output -->
         <link href="css/ionic.app.css" rel="stylesheet">
 
-        <div ng-controller="StyleCtrl">
-            <link ng-href="css/{{StyleCtrl.getActiveTheme().name}}.css" rel="stylesheet">
-        </div>
-
-
         <!-- ionic/angularjs js -->
         <script src="lib/ionic/js/ionic.bundle.js"></script>
 
@@ -45,7 +40,7 @@
 
     </head>
 
-    <body>
+    <body ng-controller="StyleCtrl" class="{{StyleCtrl.getActiveTheme().name}}">
         <ion-nav-view></ion-nav-view>
     </body>
 </html>

@@ -1,0 +1,85 @@
+$item-bg: grey;
+$item-bg-active: #939393;
+$item-divider-bg: #575757;
+$item-border: #949494;
+$item-text-color: #cbcbcb;
+$item-subtext-color: #b3b3b3;
+$header-bg: grey;
+$header-text-color: white;
+$toggle-color: #4b4b4b;
+$toggle-color2: #a5a5a5;
+$toggle-handle-color: #959595;
+$toggle-handle-color2: #959595;
+$counter-color: #464646;
+
+.dark {
+  .bar-header {
+    background-image: none !important;
+  }
+
+  .menu-content {
+    .scroll-content {
+      background-color: $item-bg;
+    }
+  }
+
+  .item, .item-content, .item-toggle {
+    background-color: $item-bg;
+    border-color: $item-border;
+    color: $item-text-color;
+
+    p {
+      color: $item-subtext-color;
+    }
+
+    &.activated {
+      background-color: $item-bg-active;
+    }
+  }
+
+  .item-divider {
+    background-color: $item-divider-bg;
+
+  }
+
+  .bar-header {
+    background-color: $header-bg;
+    border-color: $item-border;
+
+    .title {
+      color: $header-text-color;
+    }
+  }
+
+  .toggle.toggle-calm input:checked + .track {
+    background-color: $toggle-color;
+    border-color: $toggle-color;
+
+    .handle {
+      background-color: $toggle-handle-color;
+    }
+  }
+
+  .toggle .track {
+    background-color: $toggle-color2;
+    border-color: $toggle-color2;
+
+    .handle {
+      background-color: $toggle-handle-color2;
+    }
+  }
+
+  .counter-circle {
+    border-color: $counter-color;
+  }
+
+  .counter-label {
+    color: $counter-color;
+  }
+
+  .rotate-circle {
+    &:before {
+      background-color: $item-bg;
+    }
+  }
+}

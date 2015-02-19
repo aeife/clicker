@@ -7017,7 +7017,7 @@ a.button {
   line-height: 50vh;
   text-align: center;
   font-size: 16.66667vh;
-  color: orange;
+  color: #e39100;
   margin: 0; }
 
 .counter-circle {
@@ -7103,3 +7103,39 @@ a.button {
 
 .text-small {
   color: #616161; }
+
+.dark .bar-header {
+  background-image: none !important; }
+.dark .menu-content .scroll-content {
+  background-color: grey; }
+.dark .item, .dark .item-content, .dark .item-toggle {
+  background-color: grey;
+  border-color: #949494;
+  color: #cbcbcb; }
+  .dark .item p, .dark .item-content p, .dark .item-toggle p {
+    color: #b3b3b3; }
+  .dark .item.activated, .dark .item-content.activated, .dark .item-toggle.activated {
+    background-color: #939393; }
+.dark .item-divider {
+  background-color: #575757; }
+.dark .bar-header {
+  background-color: grey;
+  border-color: #949494; }
+  .dark .bar-header .title {
+    color: white; }
+.dark .toggle.toggle-calm input:checked + .track {
+  background-color: #4b4b4b;
+  border-color: #4b4b4b; }
+  .dark .toggle.toggle-calm input:checked + .track .handle {
+    background-color: #959595; }
+.dark .toggle .track {
+  background-color: #a5a5a5;
+  border-color: #a5a5a5; }
+  .dark .toggle .track .handle {
+    background-color: #959595; }
+.dark .counter-circle {
+  border-color: #464646; }
+.dark .counter-label {
+  color: #464646; }
+.dark .rotate-circle:before {
+  background-color: grey; }
