@@ -13,11 +13,12 @@ angular.module('components.settingsData', ['components.clickData'])
         var settingsData = {
             themes: [
                 {name: 'light'},
-                {name: 'dark'},
+                {name: 'grey'},
                 {name: 'orange'},
                 {name: 'blue'},
                 {name: 'green'},
-                {name: 'mint'}
+                {name: 'mint'},
+                {name: 'night'}
             ],
             activeTheme: null,
             sound: false,
