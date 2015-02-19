@@ -1,0 +1,18 @@
+$item-bg: #4fc050;
+$item-bg-active: lighten($item-bg, 5);
+$item-divider-bg: darken($item-bg, 5);
+$item-border: darken($item-bg, 5);
+$item-text-color: darken($item-bg, 30);
+$item-subtext-color: darken($item-bg, 20);
+$item-note-text-color: $item-subtext-color;
+$header-bg: $item-bg;
+$header-text-color: darken($item-bg, 40);
+$toggle-color: darken($item-bg, 10);
+$toggle-color2: lighten($item-bg, 20);
+$toggle-handle-color: lighten($item-bg, 5);
+$toggle-handle-color2: $toggle-handle-color;
+$counter-color: lighten($item-bg, 20);
+
+.green {
+  @include theme();
+}
