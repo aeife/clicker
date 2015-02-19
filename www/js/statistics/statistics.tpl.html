@@ -6,6 +6,10 @@
             </ion-item>
             <canvas ng-if="StatisticsCtrl.charts.sum.data[0].length > 0" id="line" class="chart chart-line" data="StatisticsCtrl.charts.sum.data" labels="StatisticsCtrl.charts.sum.labels"
                     legend="true" series="StatisticsCtrl.charts.sum.series" click="onClick"></canvas>
+
+            <ion-item ng-if="!StatisticsCtrl.charts.sum.data[0] || StatisticsCtrl.charts.sum.data[0].length <= 0">
+                not enough click data yet
+            </ion-item>
         </div>
         <div class="card">
             <ion-item class="item-divider">
@@ -13,6 +17,9 @@
             </ion-item>
             <canvas ng-if="StatisticsCtrl.charts.rate.data[0].length > 0" id="line" class="chart chart-line" data="StatisticsCtrl.charts.rate.data" labels="StatisticsCtrl.charts.sum.labels"
                     legend="true" series="StatisticsCtrl.charts.rate.series" click="onClick"></canvas>
+            <ion-item ng-if="!StatisticsCtrl.charts.rate.data[0] || StatisticsCtrl.charts.rate.data[0].length <= 0">
+                not enough click data yet
+            </ion-item>
         </div>
         <ion-list>
             <div class="card">
@@ -47,6 +54,10 @@
                 <ion-item>
                     Last Click
                     <div class="item-note">{{StatisticsCtrl.clicks.last.time | date:'medium'}}</div>
+                </ion-item>
+                <ion-item>
+                    Click Count
+                    <div class="item-note">{{StatisticsCtrl.clicks.count}}</div>
                 </ion-item>
             </div>
         </ion-list>

@@ -79,14 +79,17 @@ angular.module('clicker.statistics', ['chart.js', 'components.clickData'])
                 if (clickData.getClicks() && clickData.getClicks().length > 0) {
                     var totalTime = _.last(clickData.getClicks()).time - _.first(clickData.getClicks()).time;
 
-                    $scope.StatisticsCtrl.statistics.perSecond = clickData.getClicks().length / Math.abs(totalTime / 1000 );
-                    $scope.StatisticsCtrl.statistics.perMinute = clickData.getClicks().length / Math.abs(totalTime / 1000 / 60);
-                    $scope.StatisticsCtrl.statistics.perHour = clickData.getClicks().length / Math.abs(totalTime / 1000 / 60 / 60);
+                    if (totalTime > 0) {
+                        $scope.StatisticsCtrl.statistics.perSecond = clickData.getClicks().length / Math.abs(totalTime / 1000);
+                        $scope.StatisticsCtrl.statistics.perMinute = clickData.getClicks().length / Math.abs(totalTime / 1000 / 60);
+                        $scope.StatisticsCtrl.statistics.perHour = clickData.getClicks().length / Math.abs(totalTime / 1000 / 60 / 60);
+                    }
                 }
             },
             clicks: {
                 first: null,
-                last: null
+                last: null,
+                count: null
             }
         };
 
@@ -97,6 +100,7 @@ angular.module('clicker.statistics', ['chart.js', 'components.clickData'])
                 $scope.StatisticsCtrl.generateStatistics();
                 $scope.StatisticsCtrl.clicks.first = _.first(clickData.getClicks());
                 $scope.StatisticsCtrl.clicks.last = _.last(clickData.getClicks());
+                $scope.StatisticsCtrl.clicks.count = clickData.getClicks().length;
             }
         });
     });
