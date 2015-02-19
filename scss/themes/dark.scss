@@ -11,7 +11,7 @@ $toggle-color: darken($item-bg, 20);
 $toggle-color2: lighten($item-bg, 20);
 $toggle-handle-color: lighten($item-bg, 35);
 $toggle-handle-color2: $toggle-handle-color;
-$counter-color: darken($item-bg, 30);
+$counter-color: darken($item-bg, 17);
 
 .dark {
   @include theme();
