@@ -28,6 +28,7 @@ angular.module('components.clickData', [])
             },
             reset: function () {
                 _clicks = [];
+                _save();
             }
         };
 
