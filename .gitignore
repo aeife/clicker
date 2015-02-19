@@ -6,6 +6,7 @@ platforms/
 plugins/
 
 www/lib
+www/css/ionic.app.*
 .idea
 
 _site
