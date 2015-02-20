@@ -1,4 +1,4 @@
-$item-bg: orange;
+$item-bg: #eb0500;
 $item-bg-active: lighten($item-bg, 15);
 $item-divider-bg: darken($item-bg, 5);
 $item-border: darken($item-bg, 5);
@@ -13,6 +13,6 @@ $toggle-handle-color: lighten($item-bg, 35);
 $toggle-handle-color2: $toggle-handle-color;
 $counter-color: darken($item-bg, 10);
 
-.orange {
+.red {
   @include theme();
 }
