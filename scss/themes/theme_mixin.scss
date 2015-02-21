@@ -10,6 +10,11 @@
   }
 
   .sidebarContent {
+
+    h1, h2, h3, h4, h5 {
+      color: $header-text-color ;
+    }
+
     .item, .item-content, .item-toggle {
       background-color: $item-bg;
       border-color: $item-border;
@@ -35,6 +40,10 @@
     .item-divider {
       background-color: $item-divider-bg;
 
+    }
+
+    .text-small {
+      color: $item-subtext-color;
     }
   }
 
