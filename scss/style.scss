@@ -143,3 +143,22 @@ $counter-color: #e39100;
 .text-small {
   color: $sidebar-border;
 }
+
+@font-face {
+  font-family: "myfont";
+  src: url("font/icons.woff") format('woff');
+}
+
+.icon-icon, .icon-iconC {
+  display: inline-block;
+  font-family: myfont;
+  vertical-align: bottom;
+}
+
+.icon-icon:before {
+  content: "\e600";
+}
+
+.icon-iconC:before {
+  content: "\e601";
+}
