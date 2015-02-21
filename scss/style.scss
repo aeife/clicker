@@ -4,6 +4,7 @@ $sidebar-header-bg: #424242;
 $sidebar-border: #616161;
 $sidebar-color: #c0c0c0;
 $sidebar-header-size: 60px;
+$sidebar-header-size-with-statusbar: 80px;
 
 $counter-size: 50vh;
 $counter-color: #e39100;
@@ -178,5 +179,17 @@ $counter-color: #e39100;
     height: $sidebar-header-size;
     line-height: $sidebar-header-size;
     font-size: 2.5em;
+  }
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) {
+  .menu.menu-left {
+    .bar-header {
+      height: $sidebar-header-size-with-statusbar;
+    }
+
+    .has-header {
+      top: $sidebar-header-size-with-statusbar;
+    }
   }
 }
