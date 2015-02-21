@@ -13,6 +13,6 @@ $toggle-handle-color: lighten($item-bg, 5);
 $toggle-handle-color2: $toggle-handle-color;
 $counter-color: lighten($item-bg, 20);
 
-.blue {
+.theme-blue {
   @include theme();
 }
