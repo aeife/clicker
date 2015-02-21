@@ -3,9 +3,11 @@ $sidebar-bg-active: #737373;
 $sidebar-header-bg: #424242;
 $sidebar-border: #616161;
 $sidebar-color: #c0c0c0;
+$sidebar-header-size: 60px;
 
 $counter-size: 50vh;
 $counter-color: #e39100;
+
 
 .center-content {
   height: 100%;
@@ -161,4 +163,20 @@ $counter-color: #e39100;
 
 .icon-iconC:before {
   content: "\e601";
+}
+
+.menu.menu-left {
+  .bar-header {
+    height: $sidebar-header-size;
+  }
+
+  .has-header {
+    top: $sidebar-header-size;
+  }
+
+  .bar .title {
+    height: $sidebar-header-size;
+    line-height: $sidebar-header-size;
+    font-size: 2.5em;
+  }
 }
