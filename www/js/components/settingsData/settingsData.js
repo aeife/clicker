@@ -30,7 +30,7 @@ angular.module('components.settingsData', ['components.clickData'])
                 none: {
                     id: 0,
                     name: 'None',
-                    fn: function () {}
+                    fn: null
                 },
                 addClick: {
                     id: 1,

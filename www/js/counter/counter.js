@@ -34,8 +34,8 @@ angular.module('clicker.counter', ['components.stopParentClick', 'components.cli
             handleGesture: function (p) {
 
                 if (settingsData.gestures[p.type]) {
-                    // is not locked or lock gesture
-                    if (!settingsData.locked || settingsData.gestures[p.type].action === settingsData.gestureActions.lock) {
+                    // is not locked or lock gesture and is not none
+                    if ((!settingsData.locked || settingsData.gestures[p.type].action === settingsData.gestureActions.lock) && settingsData.gestures[p.type].action.fn) {
                         $timeout(function () {
                             settingsData.gestures[p.type].action.fn();
                         }, 0);
