@@ -1,5 +1,5 @@
-angular.module('components.settingsData', ['components.clickData'])
-    .service('settingsData', function (clickData, $ionicPlatform) {
+angular.module('components.settingsData', ['components.clickData', 'pascalprecht.translate'])
+    .service('settingsData', function (clickData, $ionicPlatform, $translate) {
         var setWakeLock = function (wakeLock) {
             $ionicPlatform.ready(function () {
                 if (window.cordova && wakeLock) {
@@ -21,6 +21,8 @@ angular.module('components.settingsData', ['components.clickData'])
                 {name: 'mint', class: 'theme-mint'}
             ],
             activeTheme: null,
+            languages: ['en', 'de'],
+            activeLanguage: 'en',
             sound: false,
             animation: false,
             skipIntroduction: false,
@@ -110,6 +112,11 @@ angular.module('components.settingsData', ['components.clickData'])
                     settingsData.activeTheme = theme;
                     window.localStorage['settings.activeTheme'] = JSON.stringify(theme);
                 },
+                language: function (language) {
+                    settingsData.activeLanguage = language;
+                    $translate.use(language);
+                    window.localStorage['settings.activeLanguage'] = language;
+                },
                 gestureAction: function (gesture, action) {
                     settingsData.gestures[gesture].action = action;
                     for (var gestureAction in settingsData.gestureActions) {
@@ -140,6 +147,7 @@ angular.module('components.settingsData', ['components.clickData'])
             },
             reset: function () {
                 settingsData.change.theme(settingsData.themes[0]);
+                settingsData.change.language(settingsData.languages[0]);
                 settingsData.change.gestureAction('hold', settingsData.gestureActions.none);
                 settingsData.change.gestureAction('swipeleft', settingsData.gestureActions.removeLastClick);
                 settingsData.change.gestureAction('swiperight', settingsData.gestureActions.addClick);
@@ -150,8 +158,10 @@ angular.module('components.settingsData', ['components.clickData'])
         };
 
         // defaults
+        // TODO: use change functions to set initial values
         settingsData.activeTheme = JSON.parse(window.localStorage['settings.activeTheme'] || 'false')
             || settingsData.themes[0];
+        settingsData.change.language(window.localStorage['settings.activeLanguage'] || 'en');
         settingsData.gestures.hold.action = settingsData.gestureActions[window.localStorage['settings.gestures.hold']]
             ||  settingsData.gestureActions.none;
         settingsData.gestures.swipeleft.action = settingsData.gestureActions[window.localStorage['settings.gestures.swipeleft']]

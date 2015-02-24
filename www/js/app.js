@@ -66,6 +66,15 @@ angular.module('clicker', [
                     }
                 }
             })
+            .state('app.languages', {
+                url: "/settings/languages",
+                views: {
+                    'sidebarContent': {
+                        templateUrl: "js/settings/language/language.tpl.html",
+                        controller: 'LanguageCtrl'
+                    }
+                }
+            })
             .state('app.gestures', {
                 url: "/settings/gestures",
                 views: {

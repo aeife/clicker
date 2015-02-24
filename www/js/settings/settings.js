@@ -1,5 +1,6 @@
 angular.module('clicker.settings', [
     'clicker.settings.theme',
+    'clicker.settings.language',
     'clicker.settings.gestures',
     'components.settingsData',
     'components.clickData',

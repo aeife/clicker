@@ -1,3 +1,7 @@
 {
+  "LANGUAGES": {
+    "EN": "englisch",
+    "DE": "german"
+  },
   "TEST": "test english"
 }
