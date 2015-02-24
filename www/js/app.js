@@ -4,7 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('clicker', ['ionic',
+angular.module('clicker', [
+    'ionic',
+    'pascalprecht.translate',
     'clicker.sidebar',
     'clicker.counter',
     'clicker.settings',
@@ -28,7 +30,7 @@ angular.module('clicker', ['ionic',
         });
     })
 
-    .config(function($stateProvider, $urlRouterProvider) {
+    .config(function($stateProvider, $urlRouterProvider, $translateProvider) {
         $stateProvider
             .state('app', {
                 url: "/app",
@@ -113,6 +115,14 @@ angular.module('clicker', ['ionic',
 
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/app/counter');
+
+        // i18n
+        $translateProvider.useStaticFilesLoader({
+            prefix: 'i18n/locale-',
+            suffix: '.json'
+        });
+        $translateProvider.preferredLanguage('en');
+
     })
     .controller('StyleCtrl', function ($scope, settingsData) {
         $scope.StyleCtrl = {
