@@ -1,9 +1,9 @@
-<ion-view view-title="Languages">
+<ion-view view-title="{{ 'LANGUAGE.TITLE' | translate }}">
     <ion-content>
         <ion-list>
             <ion-item ng-repeat="language in LanguageCtrl.languages" ng-click="LanguageCtrl .setActiveLanguage(language)"
                       ng-class="{'active': LanguageCtrl.getActiveLanguage() == language}">
-                {{ "LANGUAGES." + language.toUpperCase() | translate }}
+                {{ "LANGUAGE." + language.toUpperCase() | translate }}
             </ion-item>
         </ion-list>
     </ion-content>

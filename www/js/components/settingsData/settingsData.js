@@ -31,55 +31,55 @@ angular.module('components.settingsData', ['components.clickData', 'pascalprecht
             gestureActions: {
                 none: {
                     id: 0,
-                    name: 'None',
+                    name: 'ACTIONS.NONE',
                     fn: null
                 },
                 addClick: {
                     id: 1,
-                    name: 'Add A Click',
+                    name: 'ACTIONS.ADD_A_CLICK',
                     fn: clickData.addClick
                 },
                 addFiveClicks: {
                     id: 2,
-                    name: 'Add Five Clicks',
+                    name: 'ACTIONS.ADD_FIVE_CLICKS',
                     fn: function () {
                         clickData.addNClicks(5);
                     }
                 },
                 addTenClicks: {
                     id: 3,
-                    name: 'Add Ten Clicks',
+                    name: 'ACTIONS.ADD_TEN_CLICKS',
                     fn: function () {
                         clickData.addNClicks(10);
                     }
                 },
                 removeLastClick: {
                     id: 4,
-                    name: 'Remove Last Click',
+                    name: 'ACTIONS.REMOVE_LAST_CLICK',
                     fn: clickData.removeLastClick
                 },
                 removeLastFiveClicks: {
                     id: 5,
-                    name: 'Remove Last Five Clicks',
+                    name: 'ACTIONS.REMOVE_LAST_FIVE_CLICKS',
                     fn: function () {
                         clickData.removeLastNClicks(5);
                     }
                 },
                 removeLastTenClicks: {
                     id: 6,
-                    name: 'Remove Last Ten Clicks',
+                    name: 'ACTIONS.REMOVE_LAST_TEN_CLICKS',
                     fn: function () {
                         clickData.removeLastNClicks(10);
                     }
                 },
                 reset: {
                     id: 7,
-                    name: 'Quick Reset Counter',
+                    name: 'ACTIONS.RESET_COUNTER',
                     fn: clickData.reset
                 },
                 lock: {
                     id: 8,
-                    name: 'Lock Counter',
+                    name: 'ACTIONS.LOCK_COUNTER',
                     fn: function () {
                         settingsData.locked = !settingsData.locked;
                     }
@@ -87,23 +87,23 @@ angular.module('components.settingsData', ['components.clickData', 'pascalprecht
             },
             gestures: {
                 hold: {
-                    name: 'Hold',
+                    name: 'GESTURES.HOLD',
                     action: null
                 },
                 swipeleft: {
-                    name: 'Swipe Left',
+                    name: 'GESTURES.SWIPE_LEFT',
                     action: null
                 },
                 swiperight: {
-                    name: 'Swipe Right',
+                    name: 'GESTURES.SWIPE_RIGHT',
                     action: null
                 },
                 swipeup: {
-                    name: 'Swipe Up',
+                    name: 'GESTURES.SWIPE_UP',
                     action: null
                 },
                 swipedown: {
-                    name: 'Swipe Down',
+                    name: 'GESTURES.SWIPE_DOWN',
                     action: null
                 }
             },

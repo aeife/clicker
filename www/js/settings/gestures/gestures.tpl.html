@@ -1,10 +1,10 @@
-<ion-view view-title="Gestures">
+<ion-view view-title="{{ 'GESTURES.TITLE' | translate }}">
     <ion-content>
         <ion-list>
             <ion-item ng-repeat="(key, gesture) in GesturesCtrl.gestures" ng-href="#/app/settings/gestures/{{key}}" class="item-icon-right">
-                {{gesture.name}}
+                {{gesture.name | translate }}
                 <i class="icon ion-chevron-right icon-accessory"></i>
-                <div class="item-note">{{gesture.action.name}}</div>
+                <div class="item-note">{{gesture.action.name | translate}}</div>
             </ion-item>
         </ion-list>
     </ion-content>

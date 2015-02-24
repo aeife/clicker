@@ -1,36 +1,36 @@
-<ion-view view-title="Settings">
+<ion-view view-title="{{ 'SETTINGS.TITLE' | translate }}">
     <ion-content>
         <ion-list>
             <ion-item href="#/app/settings/languages" class="item-icon-right">
-                Language
+                {{ "LANGUAGE.TITLE" | translate }}
                 <i class="icon ion-chevron-right icon-accessory"></i>
-                <div class="item-note">{{"LANGUAGES." + SettingsCtrl.settingsData.activeLanguage.toUpperCase() | translate}}</div>
+                <div class="item-note">{{"LANGUAGE." + SettingsCtrl.settingsData.activeLanguage.toUpperCase() | translate}}</div>
             </ion-item>
             <ion-item href="#/app/settings/themes" class="item-icon-right">
-                Theme
+                {{ "THEME.TITLE" | translate }}
                 <i class="icon ion-chevron-right icon-accessory"></i>
                 <div class="item-note">{{SettingsCtrl.settingsData.activeTheme.name}}</div>
             </ion-item>
             <ion-item href="#/app/settings/gestures" class="item-icon-right">
-                Gestures
-                <p>Define functions for gestures.</p>
+                {{ "GESTURES.TITLE" | translate }}
+                <p>{{ "GESTURES.DESCRIPTION" | translate }}</p>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
             <ion-toggle ng-checked="SettingsCtrl.settingsData.sound"
                         ng-click="SettingsCtrl.settingsData.change.sound(!SettingsCtrl.settingsData.sound)"
-                        toggle-class="toggle-calm">Sound</ion-toggle>
+                        toggle-class="toggle-calm">{{ "SOUND.TITLE" | translate }}</ion-toggle>
             <ion-toggle ng-checked="SettingsCtrl.settingsData.animation"
                         ng-click="SettingsCtrl.settingsData.change.animation(!SettingsCtrl.settingsData.animation)"
-                        toggle-class="toggle-calm">Animation</ion-toggle>
+                        toggle-class="toggle-calm">{{ "ANIMATION.TITLE" | translate }}</ion-toggle>
             <ion-toggle ng-checked="SettingsCtrl.settingsData.keepAwake"
                         ng-click="SettingsCtrl.settingsData.change.keepAwake(!SettingsCtrl.settingsData.keepAwake)"
-                        toggle-class="toggle-calm">Keep Display Awake</ion-toggle>
-            <ion-item class="item-divider">Reset</ion-item>
+                        toggle-class="toggle-calm">{{ "DISPLAY_AWAKE.TITLE" | translate }}</ion-toggle>
+            <ion-item class="item-divider">{{ "RESET.TITLE" | translate }}</ion-item>
             <ion-item ng-click="SettingsCtrl.resetClickData()">
-                Click Data
+                {{ "CLICK_DATA.TITLE" | translate }}
             </ion-item>
             <ion-item ng-click="SettingsCtrl.resetSettings()">
-                Settings
+                {{ "SETTINGS.TITLE" | translate }}
             </ion-item>
         </ion-list>
     </ion-content>

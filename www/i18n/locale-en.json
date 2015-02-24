@@ -1,7 +1,50 @@
 {
-  "LANGUAGES": {
-    "EN": "englisch",
+  "LANGUAGE": {
+    "TITLE": "Language",
+    "EN": "english",
     "DE": "german"
   },
-  "TEST": "test english"
+  "THEME": {
+    "TITLE": "Theme"
+  },
+  "GESTURES": {
+    "TITLE": "Gestures",
+    "DESCRIPTION": "Define functions for gestures.",
+    "HOLD": "Hold",
+    "SWIPE_LEFT": "Swipe Left",
+    "SWIPE_RIGHT": "Swipe Right",
+    "SWIPE_UP": "Swipe Up",
+    "SWIPE_DOWN": "Swipe Down"
+  },
+  "ACTIONS": {
+    "TITLE": "Actions",
+    "NONE": "None",
+    "ADD_A_CLICK": "Add A Click",
+    "ADD_FIVE_CLICKS": "Add Five clicks",
+    "ADD_TEN_CLICKS": "Add Ten clicks",
+    "REMOVE_LAST_CLICK": "Remove Last Click",
+    "REMOVE_LAST_FIVE_CLICKS": "Remove Last Five Clicks",
+    "REMOVE_LAST_TEN_CLICKS": "Remove Last Ten Clicks",
+    "RESET_COUNTER": "Reset Counter",
+    "LOCK_COUNTER": "LOCK Counter"
+
+  },
+  "SOUND": {
+    "TITLE": "Sound"
+  },
+  "ANIMATION": {
+    "TITLE": "Animation"
+  },
+  "DISPLAY_AWAKE": {
+    "TITLE": "Keep Display Awake"
+  },
+  "RESET": {
+    "TITLE": "Reset"
+  },
+  "CLICK_DATA": {
+    "TITLE": "Click Data"
+  },
+  "SETTINGS": {
+    "TITLE": "Settings"
+  }
 }
