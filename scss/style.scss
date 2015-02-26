@@ -152,18 +152,15 @@ $counter-color: #e39100;
   src: url("font/icons.woff") format('woff');
 }
 
-.icon-icon, .icon-iconC {
+.icon-iconC {
   display: inline-block;
   font-family: myfont;
   vertical-align: bottom;
 }
 
-.icon-icon:before {
-  content: "\e600";
-}
-
 .icon-iconC:before {
-  content: "\e601";
+  content: "\e600";
+  margin-right: -2px;
 }
 
 .menu.menu-left {
@@ -192,4 +189,8 @@ $counter-color: #e39100;
       top: $sidebar-header-size-with-statusbar;
     }
   }
+}
+
+.text-normal {
+  font-weight: 400 !important;
 }
