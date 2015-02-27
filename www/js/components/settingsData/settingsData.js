@@ -12,13 +12,13 @@ angular.module('components.settingsData', ['components.clickData', 'pascalprecht
 
         var settingsData = {
             themes: [
-                {name: 'light', class: 'theme-light'},
-                {name: 'dark', class: 'theme-dark'},
-                {name: 'grey', class: 'theme-grey'},
-                {name: 'red', class: 'theme-red'},
-                {name: 'blue', class: 'theme-blue'},
-                {name: 'green', class: 'theme-green'},
-                {name: 'mint', class: 'theme-mint'}
+                {name: 'THEME.LIGHT', class: 'theme-light'},
+                {name: 'THEME.DARK', class: 'theme-dark'},
+                {name: 'THEME.GREY', class: 'theme-grey'},
+                {name: 'THEME.RED', class: 'theme-red'},
+                {name: 'THEME.BLUE', class: 'theme-blue'},
+                {name: 'THEME.GREEN', class: 'theme-green'},
+                {name: 'THEME.MINT', class: 'theme-mint'}
             ],
             activeTheme: null,
             languages: ['en', 'de'],

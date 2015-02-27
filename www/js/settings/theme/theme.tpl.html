@@ -3,7 +3,7 @@
         <ion-list>
             <ion-item ng-repeat="theme in ThemeCtrl.themes" ng-click="ThemeCtrl.setActiveTheme(theme)"
                       ng-class="{'active': ThemeCtrl.getActiveTheme().name == theme.name}">
-                {{theme.name}}
+                {{theme.name | translate}}
             </ion-item>
         </ion-list>
     </ion-content>

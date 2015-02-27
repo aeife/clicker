@@ -5,7 +5,14 @@
     "DE": "german"
   },
   "THEME": {
-    "TITLE": "Theme"
+    "TITLE": "Theme",
+    "LIGHT": "Light",
+    "DARK": "Dark",
+    "GREY": "Grey",
+    "RED": "Red",
+    "BLUE": "Blue",
+    "GREEN": "Green",
+    "MINT": "Mint"
   },
   "GESTURES": {
     "TITLE": "Gestures",
@@ -46,5 +53,69 @@
   },
   "SETTINGS": {
     "TITLE": "Settings"
+  },
+  "STATISTICS": {
+    "TITLE": "Statistics",
+    "CLICK_COUNT": "Click Count",
+    "CLICK_RATE": "Click Rate",
+    "NOT_ENOUGH_DATA": "Not enough click data",
+    "NUMBERS": "Numbers",
+    "PER_SECOND": "Clicks Per Second",
+    "PER_MINUTE": "Clicks Per Minute",
+    "PER_HOUR": "Clicks Per Hour",
+    "MORE": "More Information",
+    "DURATION": "Duration",
+    "FIRST": "First Click",
+    "LAST": "Last Click",
+    "COUNT": "Click Count"
+  },
+  "EXPORT": {
+    "TITLE": "Export",
+    "EMAIL": "E-Mail"
+  },
+  "COUNTER": {
+    "TITLE": "Counter"
+  },
+  "ABOUT": {
+    "TITLE": "About",
+    "MADE_WITH": "Made with",
+    "BY": "by André Eife",
+    "SUPPORT": "Support",
+    "SUPPORT_SUBTEXT": "Questions or feature requests?",
+    "WEBSITE": "Website",
+    "EMAIL": "E-Mail",
+    "AUTHOR": "Author"
+  },
+  "INTRODUCTION":  {
+    "TITLE": "Introduction",
+    "PAGE1": {
+      "HEADING": "Welcome to Clicksta!",
+      "TEXT1": "Clicksta allows you to quickly count and provides you with all customization and statistics you will need."
+    },
+    "PAGE2": {
+      "HEADING": "The Counter",
+      "TEXT1": "The heart of this application is the simple to use counter. Just click on every part of your touchscreen to increase the counter.",
+      "TEXT2": "The current counter is shown in the middle so you always see the amount.",
+      "TEXT3": "Try out some gestures like swiping or holding the finger on your screen. This will allow you to handle further action."
+    },
+    "PAGE3": {
+      "HEADING": "Customization",
+      "TEXT1": "Want to change the look or behavior? No Problem.",
+      "TEXT2": "The settings view allows you to choose a theme and enable animations and sound. Make clicker your own.",
+      "TEXT3": "You can also change the action for each gesture which you can use on the counter view. Every gesture can be combined with every action."
+    },
+    "PAGE4": {
+      "HEADING": "Statistics",
+      "TEXT1": "All the information you will need can be viewed on the statistics page.",
+      "TEXT2": "Charts with detailed trends of your clicks, information about the click amount per time and various other information.",
+      "TEXT3": "You can also export these statistics!"
+    },
+    "PAGE5": {
+      "HEADING": "Let's go",
+      "TEXT1": "That is all to know about Clicksta.",
+      "TEXT2": "Have fun and start clicking."
+    },
+    "START": "Start using Clicksta",
+    "SKIP": "Skip Introduction"
   }
 }

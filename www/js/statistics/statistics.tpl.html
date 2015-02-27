@@ -1,62 +1,62 @@
-<ion-view view-title="Statistics">
+<ion-view view-title="{{ 'STATISTICS.TITLE' | translate }}">
     <ion-content>
         <div class="card">
             <ion-item class="item-divider">
-                Click count
+                {{ 'STATISTICS.CLICK_COUNT' | translate }}
             </ion-item>
             <canvas ng-if="StatisticsCtrl.charts.sum.data[0].length > 0" id="line" class="chart chart-line" data="StatisticsCtrl.charts.sum.data" labels="StatisticsCtrl.charts.sum.labels"
                     legend="true" series="StatisticsCtrl.charts.sum.series" click="onClick"></canvas>
 
             <ion-item ng-if="!StatisticsCtrl.charts.sum.data[0] || StatisticsCtrl.charts.sum.data[0].length <= 0">
-                not enough click data yet
+                {{ 'STATISTICS.NOT_ENOUGH_DATA' | translate }}
             </ion-item>
         </div>
         <div class="card">
             <ion-item class="item-divider">
-                Click rate
+                {{ 'STATISTICS.CLICK_RATE' | translate }}
             </ion-item>
             <canvas ng-if="StatisticsCtrl.charts.rate.data[0].length > 0" id="line" class="chart chart-line" data="StatisticsCtrl.charts.rate.data" labels="StatisticsCtrl.charts.sum.labels"
                     legend="true" series="StatisticsCtrl.charts.rate.series" click="onClick"></canvas>
             <ion-item ng-if="!StatisticsCtrl.charts.rate.data[0] || StatisticsCtrl.charts.rate.data[0].length <= 0">
-                not enough click data yet
+                {{ 'STATISTICS.NOT_ENOUGH_DATA' | translate }}
             </ion-item>
         </div>
         <ion-list>
             <div class="card">
                 <ion-item class="item-divider">
-                    Numbers
+                    {{ 'STATISTICS.NUMBERS' | translate }}
                 </ion-item>
                 <ion-item>
-                    clicks per second
+                    {{ 'STATISTICS.PER_SECOND' | translate }}
                     <div class="item-note">{{StatisticsCtrl.statistics.perSecond | number: 2}}</div>
                 </ion-item>
                 <ion-item>
-                    clicks per minute
+                    {{ 'STATISTICS.PER_MINUTE' | translate }}
                     <div class="item-note">{{StatisticsCtrl.statistics.perMinute | number: 2}}</div>
                 </ion-item>
                 <ion-item>
-                    clicks per hour
+                    {{ 'STATISTICS.PER_HOUR' | translate }}
                     <div class="item-note">{{StatisticsCtrl.statistics.perHour | number: 2}}</div>
                 </ion-item>
                 <ion-item class="item-divider">
-                    More Information
+                    {{ 'STATISTICS.MORE' | translate }}
                 </ion-item>
                 <ion-item>
-                    Duration
+                    {{ 'STATISTICS.DURATION' | translate }}
                     <div class="item-note">
                         {{(StatisticsCtrl.clicks.last.time - StatisticsCtrl.clicks.first.time)  / 1000 / 60 | number: 1}} min
                     </div>
                 </ion-item>
                 <ion-item>
-                    First Click
+                    {{ 'STATISTICS.FIRST' | translate }}
                     <div class="item-note">{{StatisticsCtrl.clicks.first.time | date:'medium'}}</div>
                 </ion-item>
                 <ion-item>
-                    Last Click
+                    {{ 'STATISTICS.LAST' | translate }}
                     <div class="item-note">{{StatisticsCtrl.clicks.last.time | date:'medium'}}</div>
                 </ion-item>
                 <ion-item>
-                    Click Count
+                    {{ 'STATISTICS.COUNT' | translate }}
                     <div class="item-note">{{StatisticsCtrl.clicks.count}}</div>
                 </ion-item>
             </div>

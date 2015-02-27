@@ -20,27 +20,27 @@
             <ion-list>
                 <ion-item nav-clear menu-close href="#/app/counter" class="item-icon-left">
                     <i class="icon ion-pound"></i>
-                    Counter
+                    {{ 'COUNTER.TITLE' | translate }}
                     <div class="item-note">{{SideBarCtrl.getClickDataCount()}}</div>
                 </ion-item>
                 <ion-item nav-clear menu-close href="#/app/settings" class="item-icon-left">
                     <i class="icon ion-gear-b"></i>
-                    Settings
+                    {{ 'SETTINGS.TITLE' | translate }}
                 </ion-item>
                 <ion-item nav-clear menu-close href="#/app/statistics" class="item-icon-left">
                     <i class="icon ion-stats-bars"></i>
-                    Statistics
+                    {{ 'STATISTICS.TITLE' | translate }}
                 </ion-item>
                 <ion-item nav-clear menu-close href="#/app/export" class="item-icon-left">
                     <i class="icon ion-share"></i>
-                    Export
+                    {{ 'EXPORT.TITLE' | translate }}
                 </ion-item>
             </ion-list>
         </ion-content>
         <ion-footer-bar class="sidebar-footer">
             <ion-list>
                 <ion-item nav-clear menu-close href="#/app/about">
-                    About
+                    {{ 'ABOUT.TITLE' | translate }}
                 </ion-item>
             </ion-list>
         </ion-footer-bar>

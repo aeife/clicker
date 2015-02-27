@@ -1,33 +1,32 @@
-<ion-view view-title="About">
+<ion-view view-title="{{ 'ABOUT.TITLE' | translate }}">
     <ion-content>
         <div class="text-center">
             <h1 class="text-normal"><i class="icon-iconC"></i>licksta</h1>
-            <p class="text-small">Made with <i class="ion-heart"></i></p>
-            <small class="text-small">by André Eife</small>
+            <p class="text-small">{{ 'ABOUT.MADE_WITH' | translate }} <i class="ion-heart"></i> {{ 'ABOUT.BY' | translate }}</p>
         </div>
         <ion-list>
             <div class="card">
                 <ion-item class="item-divider">
-                    Support
-                    <div class="item-note">Questions or feature requests?</div>
+                    {{ 'ABOUT.SUPPORT' | translate }}
+                    <div class="item-note">{{ 'ABOUT.SUPPORT_SUBTEXT' | translate }}</div>
                 </ion-item>
                 <ion-item ng-click="AboutCtrl.openIntroduction()">
-                    Introduction
+                    {{ 'INTRODUCTION.TITLE' | translate }}
                 </ion-item>
                 <ion-item onclick="window.open('http://www.clicker.com/', '_system', 'location=yes');">
                     <!-- TODO: adjust website -->
-                    Website
+                    {{ 'ABOUT.WEBSITE' | translate }}
                     <div class="item-note">http://www.clicksta.com</div>
                 </ion-item>
                 <ion-item ng-click="AboutCtrl.supportEmail()">
                     <!-- TODO: adjust email -->
-                    E-Mail
+                    {{ 'ABOUT.EMAIL' | translate }}
                     <div class="item-note">support@clicksta.com</div>
                 </ion-item>
             </div>
             <div class="card">
                 <ion-item class="item-divider">
-                    Author
+                    {{ 'ABOUT.AUTHOR' | translate }}
                     <div class="item-note">André Eife</div>
                 </ion-item>
                 <ion-item onclick="window.open('http://twitter.com/a_eife', '_system', 'location=yes');">
@@ -35,7 +34,7 @@
                     <div class="item-note">@a_eife</div>
                 </ion-item>
                 <ion-item onclick="window.open('http://www.andre-eife.com/', '_system', 'location=yes');">
-                    Website
+                    {{ 'ABOUT.WEBSITE' | translate }}
                     <div class="item-note">http://www.andre-eife.com/</div>
                 </ion-item>
             </div>
