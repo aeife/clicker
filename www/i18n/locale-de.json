@@ -1,7 +1,121 @@
 {
   "LANGUAGE": {
     "TITLE": "Sprache",
-    "EN": "englisch",
-    "DE": "deutsch"
+    "EN": "Englisch",
+    "DE": "Deutsch"
+  },
+  "THEME": {
+    "TITLE": "Thema",
+    "LIGHT": "Hell",
+    "DARK": "Dunkel",
+    "GREY": "Grau",
+    "RED": "ROT",
+    "BLUE": "Blau",
+    "GREEN": "Grün",
+    "MINT": "Mintgrün"
+  },
+  "GESTURES": {
+    "TITLE": "Gesten",
+    "DESCRIPTION": "Definiere Funktionen für Gesten.",
+    "HOLD": "Halten",
+    "SWIPE_LEFT": "Nach links wischen",
+    "SWIPE_RIGHT": "Nach rechts wischen",
+    "SWIPE_UP": "Nach oben wischen",
+    "SWIPE_DOWN": "Nach unten wischen"
+  },
+  "ACTIONS": {
+    "TITLE": "Aktionen",
+    "NONE": "Keine",
+    "ADD_A_CLICK": "Klick hinzufügen",
+    "ADD_FIVE_CLICKS": "Fünf Klicks hinzufügen",
+    "ADD_TEN_CLICKS": "Zehn Klicks hnzufügen",
+    "REMOVE_LAST_CLICK": "Letzten Klick entfernen",
+    "REMOVE_LAST_FIVE_CLICKS": "Letzte fünf Klicks entfernen",
+    "REMOVE_LAST_TEN_CLICKS": "Letzte zehn Klicks entfernen",
+    "RESET_COUNTER": "Zähler zurücksetzen",
+    "LOCK_COUNTER": "Zähler sperren"
+
+  },
+  "SOUND": {
+    "TITLE": "Ton"
+  },
+  "ANIMATION": {
+    "TITLE": "Animation"
+  },
+  "DISPLAY_AWAKE": {
+    "TITLE": "Display angeschaltet lassen"
+  },
+  "RESET": {
+    "TITLE": "Zurücksetzen"
+  },
+  "CLICK_DATA": {
+    "TITLE": "Klickdaten"
+  },
+  "SETTINGS": {
+    "TITLE": "Einstellungen"
+  },
+  "STATISTICS": {
+    "TITLE": "Statistiken",
+    "CLICK_COUNT": "Klickzahl",
+    "CLICK_RATE": "Klickrate",
+    "NOT_ENOUGH_DATA": "Nicht genug Klickdaten",
+    "NUMBERS": "Zahlen",
+    "PER_SECOND": "Klicks pro Sekunde",
+    "PER_MINUTE": "Klicks pro Minute",
+    "PER_HOUR": "Klicks pro Stunde",
+    "MORE": "Mehr Informationen",
+    "DURATION": "Dauer",
+    "FIRST": "Erster Klick",
+    "LAST": "Letzter Klick",
+    "COUNT": "Klickzahl"
+  },
+  "EXPORT": {
+    "TITLE": "Export",
+    "EMAIL": "E-Mail"
+  },
+  "COUNTER": {
+    "TITLE": "Zähler"
+  },
+  "ABOUT": {
+    "TITLE": "Info",
+    "MADE_WITH": "Entwickelt mit",
+    "BY": "von André Eife",
+    "SUPPORT": "Hilfe",
+    "SUPPORT_SUBTEXT": "Fragen oder Ideen?",
+    "WEBSITE": "Webseite",
+    "EMAIL": "E-Mail",
+    "AUTHOR": "Autor"
+  },
+  "INTRODUCTION":  {
+    "TITLE": "Einführung",
+    "PAGE1": {
+      "HEADING": "Wilkommen zu Clicksta!",
+      "TEXT1": "Clicksta allows you to quickly count and provides you with all customization and statistics you will need."
+    },
+    "PAGE2": {
+      "HEADING": "The Counter",
+      "TEXT1": "The heart of this application is the simple to use counter. Just click on every part of your touchscreen to increase the counter.",
+      "TEXT2": "The current counter is shown in the middle so you always see the amount.",
+      "TEXT3": "Try out some gestures like swiping or holding the finger on your screen. This will allow you to handle further action."
+    },
+    "PAGE3": {
+      "HEADING": "Customization",
+      "TEXT1": "Want to change the look or behavior? No Problem.",
+      "TEXT2": "The settings view allows you to choose a theme and enable animations and sound. Make clicker your own.",
+      "TEXT3": "You can also change the action for each gesture which you can use on the counter view. Every gesture can be combined with every action."
+    },
+    "PAGE4": {
+      "HEADING": "Statistics",
+      "TEXT1": "All the information you will need can be viewed on the statistics page.",
+      "TEXT2": "Charts with detailed trends of your clicks, information about the click amount per time and various other information.",
+      "TEXT3": "You can also export these statistics!"
+    },
+    "PAGE5": {
+      "HEADING": "Los gehts!",
+      "TEXT1": "Das ist alles was du über Clicksta wissen musst.",
+      "TEXT2": "Viel Spaß und fang an zu klicken."
+    },
+    "START": "Starte Clicksta",
+    "SKIP": "Einführung überspringen"
   }
 }
