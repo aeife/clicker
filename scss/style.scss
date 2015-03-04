@@ -194,3 +194,8 @@ $counter-color: #e39100;
 .text-normal {
   font-weight: 400 !important;
 }
+
+.card, .item:first-child, .item:last-child {
+  border-radius: 0 !important;
+}
+
