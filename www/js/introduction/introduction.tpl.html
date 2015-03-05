@@ -2,8 +2,8 @@
     <ion-content scroll="false">
         <ion-slide-box>
             <ion-slide class="text-center">
-                <h2>{{ 'INTRODUCTION.PAGE1.HEADING' | translate }}</h2>
-                <p>{{ 'INTRODUCTION.PAGE1.TEXT1' | translate }}</p>
+                <h2 bind-html-compile="'INTRODUCTION.PAGE1.HEADING' | translate"></h2>
+                <p bind-html-compile="'INTRODUCTION.PAGE1.TEXT1' | translate "></p>
             </ion-slide>
             <ion-slide class="text-center">
                 <h2>{{ 'INTRODUCTION.PAGE2.HEADING' | translate }}</h2>
@@ -25,9 +25,9 @@
             </ion-slide>
             <ion-slide class="text-center">
                 <h2>{{ 'INTRODUCTION.PAGE5.HEADING' | translate }}</h2>
-                <p>{{ 'INTRODUCTION.PAGE5.TEXT1' | translate }}</p>
+                <p bind-html-compile="'INTRODUCTION.PAGE5.TEXT1' | translate"></p>
                 <p>{{ 'INTRODUCTION.PAGE5.TEXT2' | translate }}</p>
-                <button class="button" ng-click="modal.remove()">{{ 'INTRODUCTION.START' | translate }}</button>
+                <button class="button" ng-click="modal.remove()" bind-html-compile="'INTRODUCTION.START' | translate"></button>
             </ion-slide>
         </ion-slide-box>
         <div class="modal-bottom-content">

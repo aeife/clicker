@@ -89,8 +89,8 @@
   "INTRODUCTION":  {
     "TITLE": "Einführung",
     "PAGE1": {
-      "HEADING": "Wilkommen zu Clicksta!",
-      "TEXT1": "Clicksta allows you to quickly count and provides you with all customization and statistics you will need."
+      "HEADING": "Wilkommen zu <clicksta></clicksta>!",
+      "TEXT1": "<clicksta></clicksta> allows you to quickly count and provides you with all customization and statistics you will need."
     },
     "PAGE2": {
       "HEADING": "The Counter",
@@ -112,10 +112,10 @@
     },
     "PAGE5": {
       "HEADING": "Los gehts!",
-      "TEXT1": "Das ist alles was du über Clicksta wissen musst.",
+      "TEXT1": "Das ist alles was du über <clicksta></clicksta> wissen musst.",
       "TEXT2": "Viel Spaß und fang an zu klicken."
     },
-    "START": "Starte Clicksta",
+    "START": "Starte <clicksta></clicksta>",
     "SKIP": "Einführung überspringen"
   }
 }

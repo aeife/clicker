@@ -155,8 +155,7 @@ $counter-color: #e39100;
 .icon-iconC {
   display: inline-block;
   font-family: myfont;
-  vertical-align: bottom;
-  font-size: 1.1em;
+  vertical-align: middle;
 }
 
 .icon-iconC:before {
@@ -198,5 +197,19 @@ $counter-color: #e39100;
 
 .card, .item:first-child, .item:last-child {
   border-radius: 0 !important;
+}
+
+.clicksta-brand {
+  position: relative;
+  line-height: 1.1em;
+  padding-left: 1em;
+
+  .icon-iconC {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.1em;
+    line-height: 1.1em;
+  }
 }
 

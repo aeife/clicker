@@ -13,7 +13,9 @@ angular.module('clicker', [
     'clicker.statistics',
     'clicker.export',
     'clicker.about',
-    'components.settingsData'
+    'components.settingsData',
+    'components.clicksta',
+    'ngSanitize'
 ])
 
     .run(function($ionicPlatform) {
